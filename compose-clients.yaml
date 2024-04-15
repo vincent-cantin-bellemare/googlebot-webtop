@@ -1,0 +1,56 @@
+services:
+  client1:
+    image: googlebotclient-app:v1
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3010:3000
+      - 3011:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client2:
+    image: googlebotclient-app:v1
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3020:3000
+      - 3021:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+  client3:
+    image: googlebotclient-app:v1
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3030:3000
+      - 3031:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
