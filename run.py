@@ -9,8 +9,6 @@ from datetime import datetime
 
 
 class Runner:
-    CLIENTS_NB = 5
-
     def log(self, message):
         """ Logs a message """
         print(f'Runner: {message}')
@@ -44,7 +42,7 @@ class Runner:
 
     def run_docker_compose(self):
         """ Runs Docker Compose commands to start or restart the environment """
-        commands = ["docker", "compose", "-f", "compose-clients.yaml", "-p", self.docker_project]
+        commands = ["docker", "compose", "-f", "compose.yaml", "-p", self.docker_project]
         down_commands = commands + ["down"]
         self.log(f"Executing: {' '.join(down_commands)}")
         subprocess.run(down_commands)
@@ -60,7 +58,7 @@ class Runner:
             '-it',
             '-u',
             'abc',
-            'googlebotwebtopclients-client%d-1' % number,
+            f'{self.docker_project}-client{number}-1',
             'bash', '-c', "cd /app && python3 run.py"
         ]
         self.log(f"Executing: {' '.join(exec_commands)}")
@@ -71,7 +69,7 @@ class Runner:
             'docker',
             'exec',
             '-it',
-            'googlebotwebtopclients-client%d-1' % number,
+            f'{self.docker_project}-client{number}-1',
             'bash',
             '-c',
             'cd /app && bash install.sh'
@@ -87,14 +85,15 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     runner = Runner()
-    runner.docker_project = "googlebotwebtopclients"
+    runner.docker_project = "googlebotwebtop"
+    runner.clients_nb = 5
 
     if args.build:
         runner.log('Building docker...')
         runner.create_config_file()
         runner.run_docker_compose()
 
-        for i in range(runner.CLIENTS_NB):
+        for i in range(runner.clients_nb):
             runner.sleep(5)
             app_number = i + 1
             runner.log(f'Starting app {app_number}...')
@@ -107,7 +106,7 @@ if __name__ == '__main__':
         if args.build:
             runner.sleep(5)
 
-        for i in range(runner.CLIENTS_NB):
+        for i in range(runner.clients_nb):
             app_number = i + 1
             runner.log(f'Starting app {app_number}...')
             thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number,))
