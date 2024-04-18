@@ -51,19 +51,31 @@ class Runner:
         self.log(f"Executing: {' '.join(up_commands)}")
         subprocess.run(up_commands)
 
-    def run_docker_app(self, number):
+    def run_docker_app_abc(self, number):
         exec_commands = [
             'docker',
             'exec',
             '-it',
             '-u',
             'abc',
-            'googlebotwebtopclients-app%d-1' % number,
+            'googlebotwebtopclients-client%d-1' % number,
             'bash', '-c', "cd /app && python3 run.py"
         ]
         self.log(f"Executing: {' '.join(exec_commands)}")
         subprocess.run(exec_commands)
-        # subprocess.Popen(exec_commands)
+
+    def run_docker_app_root(self, number):
+        exec_commands = [
+            'docker',
+            'exec',
+            '-it',
+            'googlebotwebtopclients-client%d-1' % number,
+            'bash',
+            '-c',
+            'cd /app && bash install.sh'
+        ]
+        self.log(f"Executing: {' '.join(exec_commands)}")
+        subprocess.run(exec_commands)
 
 
 if __name__ == '__main__':
@@ -80,14 +92,22 @@ if __name__ == '__main__':
         runner.create_config_file()
         runner.run_docker_compose()
 
+        for i in range(3):
+            runner.sleep(5)
+            app_number = i + 1
+            runner.log(f'Starting app {app_number}...')
+            thread = threading.Thread(target=runner.run_docker_app_root, args=(app_number,))
+            thread.start()
+
+
     if args.exec:
         runner.log('Executing...')
 
         if args.build:
             runner.sleep(5)
 
-        for i in range(1):
+        for i in range(3):
             app_number = i + 1
             runner.log(f'Starting app {app_number}...')
-            thread = threading.Thread(target=runner.run_docker_app, args=(app_number,))
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number,))
             thread.start()

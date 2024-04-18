@@ -1,6 +1,6 @@
 services:
   client1:
-    image: googlebotwebtopclients-app:v2024041703
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
 
   client2:
-    image: googlebotwebtopclients-app:v2024041703
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -38,7 +38,7 @@ services:
     restart: unless-stopped
 
   client3:
-    image: googlebotwebtopclients-app:v2024041703
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
