@@ -18,3 +18,17 @@ docker exec -it -u abc googlebotwebtop-client3-1 bash -c 'cd /app && python3 run
 python3 run.py --build
 python3 run.py --exec
 ```
+
+Ubuntu Installation
+
+```sh
+sudo apt install nfs-common
+sudo addgroup --system docker
+sudo adduser $USER docker
+newgrp docker
+sudo usermod -aG docker $USER
+sudo docker ps
+sudo snap disable docker
+sudo snap enable docker
+sudo docker ps
+```
