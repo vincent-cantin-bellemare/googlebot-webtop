@@ -55,3 +55,117 @@ services:
       - 3031:3001
     shm_size: "1gb" #optional
     restart: unless-stopped
+
+  client4:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3040:3000
+      - 3041:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client5:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3050:3000
+      - 3051:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  # client6:
+  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
+  #   security_opt:
+  #     - seccomp:unconfined #optional
+  #   entrypoint: [/init]
+  #   volumes:
+  #     - ./app:/app
+  #   environment:
+  #     - PUID=5001
+  #     - PGID=5001
+  #     - TZ=Etc/UTC
+  #     - SUBFOLDER=/ #optional
+  #     - TITLE=Webtop #optional
+  #   ports:
+  #     - 3060:3000
+  #     - 3061:3001
+  #   shm_size: "1gb" #optional
+  #   restart: unless-stopped
+
+  # client7:
+  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
+  #   security_opt:
+  #     - seccomp:unconfined #optional
+  #   entrypoint: [/init]
+  #   volumes:
+  #     - ./app:/app
+  #   environment:
+  #     - PUID=5001
+  #     - PGID=5001
+  #     - TZ=Etc/UTC
+  #     - SUBFOLDER=/ #optional
+  #     - TITLE=Webtop #optional
+  #   ports:
+  #     - 3070:3000
+  #     - 3071:3001
+  #   shm_size: "1gb" #optional
+  #   restart: unless-stopped
+
+  # client8:
+  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
+  #   security_opt:
+  #     - seccomp:unconfined #optional
+  #   entrypoint: [/init]
+  #   volumes:
+  #     - ./app:/app
+  #   environment:
+  #     - PUID=5001
+  #     - PGID=5001
+  #     - TZ=Etc/UTC
+  #     - SUBFOLDER=/ #optional
+  #     - TITLE=Webtop #optional
+  #   ports:
+  #     - 3080:3000
+  #     - 3081:3001
+  #   shm_size: "1gb" #optional
+  #   restart: unless-stopped
+
+  # client9:
+  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
+  #   security_opt:
+  #     - seccomp:unconfined #optional
+  #   entrypoint: [/init]
+  #   volumes:
+  #     - ./app:/app
+  #   environment:
+  #     - PUID=5001
+  #     - PGID=5001
+  #     - TZ=Etc/UTC
+  #     - SUBFOLDER=/ #optional
+  #     - TITLE=Webtop #optional
+  #   ports:
+  #     - 3090:3000
+  #     - 3091:3001
+  #   shm_size: "1gb" #optional
+  #   restart: unless-stopped

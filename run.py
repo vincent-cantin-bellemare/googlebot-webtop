@@ -9,6 +9,8 @@ from datetime import datetime
 
 
 class Runner:
+    CLIENTS_NB = 5
+
     def log(self, message):
         """ Logs a message """
         print(f'Runner: {message}')
@@ -92,13 +94,12 @@ if __name__ == '__main__':
         runner.create_config_file()
         runner.run_docker_compose()
 
-        for i in range(3):
+        for i in range(runner.CLIENTS_NB):
             runner.sleep(5)
             app_number = i + 1
             runner.log(f'Starting app {app_number}...')
             thread = threading.Thread(target=runner.run_docker_app_root, args=(app_number,))
             thread.start()
-
 
     if args.exec:
         runner.log('Executing...')
@@ -106,7 +107,7 @@ if __name__ == '__main__':
         if args.build:
             runner.sleep(5)
 
-        for i in range(3):
+        for i in range(runner.CLIENTS_NB):
             app_number = i + 1
             runner.log(f'Starting app {app_number}...')
             thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number,))
