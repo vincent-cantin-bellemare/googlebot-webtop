@@ -1,11 +1,9 @@
+from datetime import datetime
 import threading
 import argparse
 import time
 import os
 import subprocess
-
-
-from datetime import datetime
 
 
 class Runner:
