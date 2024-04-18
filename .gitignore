@@ -1,6 +1,5 @@
-tor-browser
-tor-browser-linux-x86_64-13.0.13.tar.xz
-.DS_Store
-config/*
-output/*
+__old/
 config.py
+.DS_Store
+.env
+*.tar
