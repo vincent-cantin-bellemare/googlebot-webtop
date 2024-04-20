@@ -1,4 +1,5 @@
 import base64
+import json
 import datetime
 import io
 from marionette_driver import marionette
@@ -8,7 +9,7 @@ import subprocess
 import socket
 import time
 
-from config import TOR_COMMAND, GRAPHQL_URL, GRAPHQL_AUTHORIZATION
+from config import MASTER_URL
 
 '''
 Script to scrape Google search results using Tor and Selenium
@@ -68,89 +69,50 @@ class WebScraper:
 
     def start_tor(self):
         self.log('Tor:start', 'blue')
-        self.tor_process = subprocess.Popen(TOR_COMMAND, shell=True)
+        self.tor_process = subprocess.Popen('start-tor-browser', shell=True)
 
-    def get_graphql_request(self):
-        headers = {
-            'Content-Type': 'application/json',
-            'Authorization': GRAPHQL_AUTHORIZATION
-        }
-
-        query = """
-        {
-            resultsGetRequest {
-                url
-                keywordId,
-                localityId,
-            }
-        }
-        """
-        self.log(f'GetGraphqlRequest:start ({GRAPHQL_URL})', 'blue')
+    def pull_master_request(self):
+        pull_url = f'{MASTER_URL}/client/pull'
+        self.log(f'PullMasterRequest:start ({pull_url})', 'blue')
 
         try:
-            response = requests.post(GRAPHQL_URL, json={'query': query}, headers=headers, timeout=10)
+            response = requests.get(pull_url, timeout=30)
         except Exception as e:
-            self.log(f'GetGraphqlRequest:error({e})', 'red')
+            self.log(f'PullMasterRequest:error({e})', 'red')
             self.sleep(10)
-            return self.get_graphql_request()
+            return self.pull_master_request()
         else:
             try:
                 response_json = response.json()
-                ret = response_json['data']['resultsGetRequest']
             except Exception as e:
                 self.sleep(3)
-                return self.get_graphql_request()
+                return self.pull_master_request()
             else:
-                self.log(f'GetGraphqlRequest:end', 'green')
-                return ret
+                self.log(f'PullMasterRequest:end', 'green')
+                return response_json
 
-    def add_graphql_response(self, response_dict):
-        self.log(f'AddGraphqlResponse:start', 'blue')
+    def push_master_request(self, data):
+        self.log(f'PushMasterRequest:start', 'blue')
 
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': GRAPHQL_AUTHORIZATION
         }
 
-        query = """
-            mutation MyMutation {
-                resultsResultAdd(
-                    url: "%(requestUrl)s",
-                    keywordId: %(requestKeywordId)s,
-                    localityId: %(requestLocalityId)s,
-
-                    ip: "%(clientIp)s",
-                    hostname: "%(clientHostname)s",
-                    version: "%(clientVersion)s",
-                    status: %(responseStatus)s,
-                    duration: %(responseDuration)s,
-                    increment: %(responseIncrement)s,
-                    contentB64: "%(responseContentB64)s",
-                    screenshotB64: "%(responseScreenshotB64)s"
-                )
-                {
-                        resultsResult {
-                            id
-                        }
-                    }
-                }
-        """ % response_dict
-
         try:
-            response = requests.post(GRAPHQL_URL, json={'query': query}, headers=headers, timeout=10)
+            response = requests.post(f'{MASTER_URL}/c/push', json=json.dumps(data), headers=headers, timeout=10)
         except Exception as e:
-            self.log(f'AddGraphqlResponse:error1({e})', 'magenta')
-            return self.add_graphql_response(response_dict)
+            self.log(f'PushMasterRequest:error1({e})', 'magenta')
+            return self.push_master_request(data)
         else:
             try:
                 response_json = response.json()
-                result_id = response_json['data']['resultsResultAdd']['resultsResult']['id']
+                client_id = response_json['id']
             except Exception as e:
-                self.log(f'AddGraphqlResponse:error2({e})', 'magenta')
+                self.log(f'PushMasterRequest:error2({e})', 'magenta')
                 self.sleep(3)
-                return self.add_graphql_response(response_dict)
+                return self.push_master_request(data)
             else:
-                self.log(f'AddGraphqlResponse:end (#{result_id})', 'green')
+                self.log(f'PushMasterRequest:end (#{client_id})', 'green')
                 return response_json
 
     def compress_and_convert_screenshot_to_base64(self, compress=True):
@@ -162,7 +124,7 @@ class WebScraper:
             if image.mode == 'RGBA':
                 image = image.convert('RGB')
 
-            max_width = 800
+            max_width = 600
             ratio = max_width / image.width
             new_height = int(image.height * ratio)
 
@@ -174,7 +136,7 @@ class WebScraper:
             image = image.resize((max_width, new_height), parameter)
 
             with io.BytesIO() as output:
-                image.save(output, format="JPEG", quality=85)
+                image.save(output, format="JPEG", quality=40)
                 compressed_screenshot = output.getvalue()
 
             screenshot_base64 = base64.b64encode(compressed_screenshot).decode('utf-8')
@@ -187,7 +149,7 @@ class WebScraper:
         fetch_from_datetime = datetime.datetime.now()
         fetch_increment = 0
 
-        request_dict = self.get_graphql_request()
+        request_dict = self.pull_master_request()
 
         while True:
             fetch_increment += 1
@@ -215,32 +177,30 @@ class WebScraper:
         status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
 
         data = {
-            'clientVersion': self.VERSION,
-            'clientIp': '0.0.0.0',
-            'clientHostname': self.get_hostname(),
+            'client_version': self.VERSION,
+            'client_hostname': self.get_hostname(),
 
-            'requestUrl': request_dict['url'],
-            'requestKeywordId': request_dict['keywordId'],
-            'requestLocalityId': request_dict['localityId'],
+            'request_url': request_dict['url'],
+            'request_keyword_id': request_dict['keywordId'],
+            'request_locality_id': request_dict['localityId'],
 
-            'responseDuration': int(round(fetch_duration.total_seconds(), 0)),
-            'responseIncrement': fetch_increment,
-            'responseStatus': 'true' if status_ok else 'false',
-            'responseScreenshotB64': self.compress_and_convert_screenshot_to_base64(),
-            'responseContentB64': base64.b64encode(self.client.page_source.encode('utf-8')).decode('utf-8'),
+            'response_duration': int(round(fetch_duration.total_seconds(), 0)),
+            'response_increment': fetch_increment,
+            'response_status': 'true' if status_ok else 'false',
+            'response_screenshot_b64': self.compress_and_convert_screenshot_to_base64(),
+            'response_contentB64': base64.b64encode(self.client.page_source.encode('utf-8')).decode('utf-8'),
         }
 
         if not status_ok:
             self.log(f'GoogleFetch:detected_traffic', 'blue')
 
         try:
-            self.log(f'API POST:start', 'blue')
-            self.add_graphql_response(data)
+            self.push_master_request(data)
         except Exception as e:
-            self.log(f'API POST:error ({e})', 'red')
+            self.log(f'PushMasterRequest:error ({e})', 'red')
             self.sleep(5)
         else:
-            self.log(f'API POST:success', 'green')
+            self.log(f'PushMasterRequest:success', 'green')
 
         return status_ok
 
