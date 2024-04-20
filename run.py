@@ -107,16 +107,16 @@ if __name__ == '__main__':
     elif args.runstart:
         runner.log('Executing...')
 
-        for i in range(parser.nb):
+        for i in range(args.nb):
             app_number = i + 1
-            runner.log(f'Starting app {app_number}/{parser.nb}...')
+            runner.log(f'Starting app {app_number}/{args.nb}...')
             thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, "start-tor-browser",))
             thread.start()
     elif args.runscript:
         runner.log('Executing...')
 
-        for i in range(parser.nb):
+        for i in range(args.nb):
             app_number = i + 1
-            runner.log(f'Starting app {app_number}/{parser.nb}...')
+            runner.log(f'Starting app {app_number}/{args.nb}...')
             thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, "cd /app && python3 run.py",))
             thread.start()
