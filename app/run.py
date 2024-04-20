@@ -118,8 +118,6 @@ class WebScraper:
                     self.log(f'PushMasterRequest:error3({e})', 'red')
                     self.sleep(3)
                     return self.push_master_request(data)
-                else:
-                    self.log(f'PushMasterRequest:end ({client_identifier})', 'green')
 
                 if client_status is False:
                     self.log(f'PushMasterRequest:error4(status=False)', 'red')
