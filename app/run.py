@@ -182,8 +182,8 @@ class WebScraper:
             'client_hostname': self.get_hostname(),
 
             'request_url': request_dict['url'],
-            'request_keyword_id': request_dict['keywordId'],
-            'request_locality_id': request_dict['localityId'],
+            'request_keyword_id': request_dict['keyword_id'],
+            'request_locality_id': request_dict['locality_id'],
 
             'response_duration': int(round(fetch_duration.total_seconds(), 0)),
             'response_increment': fetch_increment,
