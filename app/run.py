@@ -60,8 +60,9 @@ class WebScraper:
 
         hostname = obj.get_hostname()
         hostname = hostname if hostname else 'unknown'
+        port = os.getenv('CLIENT_PORT')
 
-        print(f'{color_code}{hostname} - {content}{end_code}')
+        print(f'{color_code}{port} ({hostname}) - {content}{end_code}')
 
     @classmethod
     def sleep(obj, seconds):
