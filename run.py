@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
     runner = Runner()
     runner.docker_project = "googlebotwebtop"
-    runner.clients_nb = 1
+    runner.clients_nb = 5
 
     if args.build:
         runner.log('Building docker...')
