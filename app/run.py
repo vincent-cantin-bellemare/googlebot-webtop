@@ -72,7 +72,7 @@ class WebScraper:
         self.tor_process = subprocess.Popen('start-tor-browser', shell=True)
 
     def pull_master_request(self):
-        pull_url = f'{MASTER_URL}/client/pull'
+        pull_url = f'{MASTER_URL}/c/pull'
         self.log(f'PullMasterRequest:start ({pull_url})', 'blue')
 
         try:
