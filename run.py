@@ -88,6 +88,9 @@ if __name__ == '__main__':
     runner.docker_project = "googlebotwebtop"
     runner.clients_nb = args.nb
 
+    runner.log(f'{runner.clients_nb} clients...')
+    runner.sleep(3)
+
     if args.build:
         runner.log('Building docker...')
         runner.create_config_file()
