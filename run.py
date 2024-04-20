@@ -52,7 +52,7 @@ class Runner:
         self.log(f"Executing: {' '.join(up_commands)}")
         subprocess.run(up_commands)
 
-    def run_docker_app_abc(self, number, command):
+    def run_docker_app_abc(self, number, commands):
         # docker exec -it -u abc googlebotwebtop-client6-1 bash -c "cd /app && python3 run.py"
         exec_commands = [
             'docker',
@@ -61,8 +61,7 @@ class Runner:
             '-u',
             'abc',
             f'{self.PROJECT_NAME}-client{number}-1',
-            'bash', '-c', command
-        ]
+        ] + commands
         self.log(f"Executing: {' '.join(exec_commands)}")
         subprocess.run(exec_commands)
 
@@ -110,7 +109,7 @@ if __name__ == '__main__':
         for i in range(args.nb):
             app_number = i + 1
             runner.log(f'Starting app {app_number}/{args.nb}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, "start-tor-browser",))
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, ["start-tor-browser"],))
             thread.start()
     elif args.runscript:
         runner.log('Executing...')
@@ -118,5 +117,5 @@ if __name__ == '__main__':
         for i in range(args.nb):
             app_number = i + 1
             runner.log(f'Starting app {app_number}/{args.nb}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, "cd /app && python3 run.py",))
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, ['bash', '-c', "cd /app && python3 run.py"],))
             thread.start()
