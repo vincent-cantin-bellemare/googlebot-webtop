@@ -52,7 +52,7 @@ class Runner:
         self.log(f"Executing: {' '.join(up_commands)}")
         subprocess.run(up_commands)
 
-    def run_docker_app_abc(self, number):
+    def run_docker_app_abc(self, number, command):
         # docker exec -it -u abc googlebotwebtop-client6-1 bash -c "cd /app && python3 run.py"
         exec_commands = [
             'docker',
@@ -61,13 +61,13 @@ class Runner:
             '-u',
             'abc',
             f'{self.PROJECT_NAME}-client{number}-1',
-            'bash', '-c', "cd /app && python3 run.py"
+            'bash', '-c', command
         ]
         self.log(f"Executing: {' '.join(exec_commands)}")
         subprocess.run(exec_commands)
 
     def run_docker_app_root(self, number):
-        # docker exec -it -u root googlebotwebtop-client6-1 bash -c "cd /app && bash install.sh"
+        # nohup docker exec -it -u root googlebotwebtop-client6-1 bash -c "cd /app && bash install.sh" &
         exec_commands = [
             'docker',
             'exec',
@@ -84,8 +84,9 @@ class Runner:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--build', action='store_true')
-    parser.add_argument('--exec', action='store_true')
-    parser.add_argument('--execnb', type=int, default=10, help='Sets the nb of clients value (default: 10)')
+    parser.add_argument('--runstart', action='store_true')
+    parser.add_argument('--runscript', action='store_true')
+    parser.add_argument('--nb', type=int, default=10, help='Sets the nb of clients value (default: 10)')
 
     args = parser.parse_args()
 
@@ -103,11 +104,19 @@ if __name__ == '__main__':
             thread = threading.Thread(target=runner.run_docker_app_root, args=(app_number,))
             thread.start()
 
-    elif args.exec:
+    elif args.runstart:
         runner.log('Executing...')
 
-        for i in range(runner.execnb):
+        for i in range(runner.nb):
             app_number = i + 1
-            runner.log(f'Starting app {app_number}/{runner.execnb}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number,))
+            runner.log(f'Starting app {app_number}/{runner.nb}...')
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, "start-tor-browser",))
+            thread.start()
+    elif args.runscript:
+        runner.log('Executing...')
+
+        for i in range(runner.nb):
+            app_number = i + 1
+            runner.log(f'Starting app {app_number}/{runner.nb}...')
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, "cd /app && python3 run.py",))
             thread.start()
