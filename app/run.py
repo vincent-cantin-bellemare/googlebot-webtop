@@ -107,13 +107,34 @@ class WebScraper:
         else:
             try:
                 response_json = response.json()
-                client_identifier = response_json['identifier']
             except Exception as e:
-                self.log(f'PushMasterRequest:error2({e})', 'magenta')
+                self.log(f'PushMasterRequest:error2({e})', 'red')
                 self.sleep(3)
                 return self.push_master_request(data)
             else:
-                self.log(f'PushMasterRequest:end ({client_identifier})', 'green')
+                try:
+                    client_status = response_json['status']
+                except:
+                    self.log(f'PushMasterRequest:error3({e})', 'red')
+                    self.sleep(3)
+                    return self.push_master_request(data)
+                else:
+                    self.log(f'PushMasterRequest:end ({client_identifier})', 'green')
+
+                if client_status is False:
+                    self.log(f'PushMasterRequest:error4(status=False)', 'red')
+                    self.sleep(3)
+                    return self.push_master_request(data)
+                else:
+                    try:
+                        client_identifier = response_json['identifier']
+                    except Exception as e:
+                        self.log(f'PushMasterRequest:error5({e})', 'red')
+                        self.sleep(3)
+                        return self.push_master_request(data)
+                    else:
+                        self.log(f'PushMasterRequest:end ({client_identifier})', 'green')
+
                 return response_json
 
     def compress_and_convert_screenshot_to_base64(self, compress=True):
