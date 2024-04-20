@@ -80,11 +80,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--exec', action='store_true')
+    parser.add_argument('--nb', type=int, default=5, help='Sets the nb of clients value (default: 5)')
+
     args = parser.parse_args()
 
     runner = Runner()
     runner.docker_project = "googlebotwebtop"
-    runner.clients_nb = 5
+    runner.clients_nb = args.nb
 
     if args.build:
         runner.log('Building docker...')
