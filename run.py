@@ -7,6 +7,8 @@ import subprocess
 
 
 class Runner:
+    CLIENTS_NB = 10
+
     def log(self, message):
         """ Logs a message """
         print(f'Runner: {message}')
@@ -80,7 +82,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--exec', action='store_true')
-    parser.add_argument('--nb', type=int, default=5, help='Sets the nb of clients value (default: 5)')
+    parser.add_argument('--execnb', type=int, default=10, help='Sets the nb of clients value (default: 10)')
 
     args = parser.parse_args()
 
@@ -96,21 +98,18 @@ if __name__ == '__main__':
         runner.create_config_file()
         runner.run_docker_compose()
 
-        for i in range(runner.clients_nb):
+        for i in range(runner.CLIENTS_NB):
             runner.sleep(5)
             app_number = i + 1
-            runner.log(f'Starting app {app_number}...')
+            runner.log(f'Starting app {app_number}/{runner.CLIENTS_NB}...')
             thread = threading.Thread(target=runner.run_docker_app_root, args=(app_number,))
             thread.start()
 
-    if args.exec:
+    elif args.exec:
         runner.log('Executing...')
 
-        if args.build:
-            runner.sleep(5)
-
-        for i in range(runner.clients_nb):
+        for i in range(runner.execnb):
             app_number = i + 1
-            runner.log(f'Starting app {app_number}...')
+            runner.log(f'Starting app {app_number}/{runner.execnb}...')
             thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number,))
             thread.start()
