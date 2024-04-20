@@ -85,6 +85,7 @@ class WebScraper:
             try:
                 response_json = response.json()
             except Exception as e:
+                self.log(f'PullMasterRequest:error({e})', 'red')
                 self.sleep(3)
                 return self.pull_master_request()
             else:
