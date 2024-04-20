@@ -8,6 +8,7 @@ import subprocess
 
 class Runner:
     CLIENTS_NB = 10
+    PROJECT_NAME = "googlebotwebtop"
 
     def log(self, message):
         """ Logs a message """
@@ -42,7 +43,7 @@ class Runner:
 
     def run_docker_compose(self):
         """ Runs Docker Compose commands to start or restart the environment """
-        commands = ["docker", "compose", "-f", "compose.yaml", "-p", self.docker_project]
+        commands = ["docker", "compose", "-f", "compose.yaml", "-p", self.PROJECT_NAME]
         down_commands = commands + ["down"]
         self.log(f"Executing: {' '.join(down_commands)}")
         subprocess.run(down_commands)
@@ -52,24 +53,26 @@ class Runner:
         subprocess.run(up_commands)
 
     def run_docker_app_abc(self, number):
+        # docker exec -it -u abc googlebotwebtop-client6-1 bash -c "cd /app && python3 run.py"
         exec_commands = [
             'docker',
             'exec',
             '-it',
             '-u',
             'abc',
-            f'{self.docker_project}-client{number}-1',
+            f'{self.PROJECT_NAME}-client{number}-1',
             'bash', '-c', "cd /app && python3 run.py"
         ]
         self.log(f"Executing: {' '.join(exec_commands)}")
         subprocess.run(exec_commands)
 
     def run_docker_app_root(self, number):
+        # docker exec -it -u root googlebotwebtop-client6-1 bash -c "cd /app && bash install.sh"
         exec_commands = [
             'docker',
             'exec',
             '-it',
-            f'{self.docker_project}-client{number}-1',
+            f'{self.PROJECT_NAME}-client{number}-1',
             'bash',
             '-c',
             'cd /app && bash install.sh'
@@ -87,11 +90,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     runner = Runner()
-    runner.docker_project = "googlebotwebtop"
-    runner.clients_nb = args.nb
-
-    runner.log(f'{runner.clients_nb} clients...')
-    runner.sleep(3)
 
     if args.build:
         runner.log('Building docker...')
