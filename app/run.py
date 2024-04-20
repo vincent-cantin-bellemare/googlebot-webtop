@@ -200,7 +200,7 @@ class WebScraper:
         data = {
             'client_version': self.VERSION,
             'client_host': os.getenv('CLIENT_HOST'),
-            'client_port': os.getenv('CLIENT_PORT'),
+            'client_port': int(os.getenv('CLIENT_PORT')),
             'client_hostname': self.get_hostname(),
 
             'request_url': request_dict['url'],
