@@ -1,6 +1,7 @@
 import base64
 import json
 import datetime
+import os
 import io
 from marionette_driver import marionette
 from PIL import Image
@@ -198,6 +199,8 @@ class WebScraper:
 
         data = {
             'client_version': self.VERSION,
+            'client_host': os.getenv('CLIENT_HOST'),
+            'client_port': os.getenv('CLIENT_PORT'),
             'client_hostname': self.get_hostname(),
 
             'request_url': request_dict['url'],
