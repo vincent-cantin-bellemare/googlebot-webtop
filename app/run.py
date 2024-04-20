@@ -208,7 +208,7 @@ class WebScraper:
             'response_increment': fetch_increment,
             'response_status': 'true' if status_ok else 'false',
             'response_screenshot_b64': self.compress_and_convert_screenshot_to_base64(),
-            'response_contentB64': base64.b64encode(self.client.page_source.encode('utf-8')).decode('utf-8'),
+            'response_content_b64': base64.b64encode(self.client.page_source.encode('utf-8')).decode('utf-8'),
         }
 
         if not status_ok:
