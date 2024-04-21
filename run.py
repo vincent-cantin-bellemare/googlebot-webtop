@@ -85,7 +85,7 @@ if __name__ == '__main__':
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--runstart', action='store_true')
     parser.add_argument('--runscript', action='store_true')
-    parser.add_argument('--nb', type=int, default=10, help='Sets the nb of clients value (default: 10)')
+    parser.add_argument('--nb', type=int, default=20, help='Sets the nb of clients value (default: 20)')
 
     args = parser.parse_args()
 
