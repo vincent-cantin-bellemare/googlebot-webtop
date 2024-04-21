@@ -80,19 +80,21 @@ class Runner:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--compose', action='store_true')
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--exec', action='store_true')
     parser.add_argument('--fromindex', type=int, default=1)
     parser.add_argument('--toindex', type=int, default=20)
-
     args = parser.parse_args()
-
     runner = Runner()
 
-    if args.build:
-        runner.log('Building docker...')
+    if args.compose:
+        runner.log('Compose...')
         runner.create_config_file()
         runner.run_docker_compose()
+
+    elif args.build:
+        runner.log('Build...')
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
@@ -101,7 +103,7 @@ if __name__ == '__main__':
             runner.sleep(5)
 
     elif args.exec:
-        runner.log('Executing...')
+        runner.log('Exec...')
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
