@@ -82,8 +82,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--exec', action='store_true')
-    parser.add_argument('--indexfrom', type=int, default=1)
-    parser.add_argument('--indexto', type=int, default=20)
+    parser.add_argument('--fromindex', type=int, default=1)
+    parser.add_argument('--toindex', type=int, default=20)
 
     args = parser.parse_args()
 
@@ -94,8 +94,8 @@ if __name__ == '__main__':
         runner.create_config_file()
         runner.run_docker_compose()
 
-        for client_id in range(args.indexfrom, args.indexto + 1):
-            runner.log(f'Starting app {client_id}/{args.indexto}...')
+        for client_id in range(args.fromindex, args.toindex + 1):
+            runner.log(f'Starting app {client_id}/{args.toindex}...')
             thread = threading.Thread(target=runner.run_docker_app_root, args=(client_id,))
             thread.start()
             runner.sleep(5)
@@ -103,8 +103,8 @@ if __name__ == '__main__':
     elif args.exec:
         runner.log('Executing...')
 
-        for client_id in range(args.indexfrom, args.indexto + 1):
-            runner.log(f'Starting app {client_id}/{args.indexto}...')
+        for client_id in range(args.fromindex, args.toindex + 1):
+            runner.log(f'Starting app {client_id}/{args.toindex}...')
             thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && python3 run.py"]))
             thread.start()
             runner.sleep(5)
