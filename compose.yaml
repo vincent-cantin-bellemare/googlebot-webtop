@@ -209,3 +209,213 @@ services:
       - 3101:3001
     shm_size: "1gb" #optional
     restart: unless-stopped
+
+  client11:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3110
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3110:3000
+      - 3111:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client12:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3120
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3120:3000
+      - 3121:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client13:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3130
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3130:3000
+      - 3131:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client14:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3140
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3140:3000
+      - 3141:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client15:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3150
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3150:3000
+      - 3151:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client16:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3160
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3160:3000
+      - 3161:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client17:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3170
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3170:3000
+      - 3171:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client18:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3180
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3180:3000
+      - 3181:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client19:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3190
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3190:3000
+      - 3191:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
+
+  client20:
+    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_HOST=googlebot-client-2
+      - CLIENT_PORT=3200
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3200:3000
+      - 3201:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
