@@ -7,7 +7,6 @@ import subprocess
 
 
 class Runner:
-    CLIENTS_NB = 20
     PROJECT_NAME = "googlebotwebtop"
 
     def log(self, message):
@@ -35,9 +34,8 @@ class Runner:
                 config_file_content = f"# Script Generated on {current_datetime}\n"
                 config_file_content += '\n'
 
-                config_file_content += 'TOR_COMMAND = \'start-tor-browser\'\n'
-                config_file_content += 'GRAPHQL_URL = \'https://gb.shopdev.ca/graphql/v1/\''
-                config_file_content += 'GRAPHQL_AUTHORIZATION = \'Basic ...\''
+                config_file_content += 'MASTER_URL = \'https://gb.shopdev.ca\''
+                config_file_content += '\n'
 
                 file.write(config_file_content)
 
