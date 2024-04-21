@@ -81,10 +81,9 @@ class Runner:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--build', action='store_true')
-    parser.add_argument('--runstart', action='store_true')
-    parser.add_argument('--runscript', action='store_true')
-    parser.add_argument('--from', type=int, default=1)
-    parser.add_argument('--to', type=int, default=20)
+    parser.add_argument('--exec', action='store_true')
+    parser.add_argument('--indexfrom', type=int, default=1)
+    parser.add_argument('--indexto', type=int, default=20)
 
     args = parser.parse_args()
 
@@ -95,27 +94,19 @@ if __name__ == '__main__':
         runner.create_config_file()
         runner.run_docker_compose()
 
-        for i in range(args.to):
-            app_number = i + 1
-
-            if app_number < args.from:
-                continue
-
-            runner.log(f'Starting app {app_number}/{args.to}...')
-            thread = threading.Thread(target=runner.run_docker_app_root, args=(app_number,))
+        for client_id in range(args.indexfrom, args.indexto + 1):
+            runner.log(f'Starting app {client_id}/{args.indexto}...')
+            thread = threading.Thread(target=runner.run_docker_app_root, args=(client_id,))
             thread.start()
             runner.sleep(5)
 
-    elif args.runscript:
+    elif args.exec:
         runner.log('Executing...')
 
-        for i in range(args.to):
-            app_number = i + 1
-
-            if app_number < args.from:
-                continue
-
-            runner.log(f'Starting app {app_number}/{args.to}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, ['bash', '-c', "cd /app && python3 run.py"]))
+        for client_id in range(args.indexfrom, args.indexto + 1):
+            runner.log(f'Starting app {client_id}/{args.indexto}...')
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && python3 run.py"]))
             thread.start()
             runner.sleep(5)
+    else:
+        print('No Action Specified. Exiting...')
