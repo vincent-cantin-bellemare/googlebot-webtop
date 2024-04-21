@@ -7,7 +7,7 @@ import subprocess
 
 
 class Runner:
-    CLIENTS_NB = 10
+    CLIENTS_NB = 20
     PROJECT_NAME = "googlebotwebtop"
 
     def log(self, message):
