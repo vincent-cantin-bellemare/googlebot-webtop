@@ -85,7 +85,8 @@ if __name__ == '__main__':
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--runstart', action='store_true')
     parser.add_argument('--runscript', action='store_true')
-    parser.add_argument('--nb', type=int, default=20, help='Sets the nb of clients value (default: 20)')
+    parser.add_argument('--from', type=int, default=1)
+    parser.add_argument('--to', type=int, default=20)
 
     args = parser.parse_args()
 
@@ -96,26 +97,27 @@ if __name__ == '__main__':
         runner.create_config_file()
         runner.run_docker_compose()
 
-        for i in range(runner.CLIENTS_NB):
-            runner.sleep(5)
+        for i in range(args.to):
             app_number = i + 1
-            runner.log(f'Starting app {app_number}/{runner.CLIENTS_NB}...')
+
+            if app_number < args.from:
+                continue
+
+            runner.log(f'Starting app {app_number}/{args.to}...')
             thread = threading.Thread(target=runner.run_docker_app_root, args=(app_number,))
             thread.start()
+            runner.sleep(5)
 
-    elif args.runstart:
-        runner.log('Executing...')
-
-        for i in range(args.nb):
-            app_number = i + 1
-            runner.log(f'Starting app {app_number}/{args.nb}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, ['bash', '-c', "start-tor-browser"],))
-            thread.start()
     elif args.runscript:
         runner.log('Executing...')
 
-        for i in range(args.nb):
+        for i in range(args.to):
             app_number = i + 1
-            runner.log(f'Starting app {app_number}/{args.nb}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, ['bash', '-c', "cd /app && python3 run.py"],))
+
+            if app_number < args.from:
+                continue
+
+            runner.log(f'Starting app {app_number}/{args.to}...')
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(app_number, ['bash', '-c', "cd /app && python3 run.py"]))
             thread.start()
+            runner.sleep(5)
