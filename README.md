@@ -16,8 +16,8 @@ docker exec -it -u abc googlebotwebtop-client3-1 bash -c 'cd /app && python3 run
 
 ```sh
 python3 run.py --compose
-python3 run.py --build --fromindex 1 --toindex 30
-python3 run.py --exec --fromindex 10 --toindex 20
+python3 run.py --build --fromindex 1 --toindex 11
+python3 run.py --exec --fromindex 1 --toindex 11
 ```
 
 Ubuntu Installation
