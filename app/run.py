@@ -10,14 +10,14 @@ import subprocess
 import socket
 import time
 
-from config import MASTER_URL
+from config import MASTER_URL, CLIENT_HOST
 
 '''
 Script to scrape Google search results using Tor and Selenium
 '''
 
 class WebScraper:
-    VERSION = '1.0.3'
+    VERSION = '1.0.4'
 
     def __init__(self):
         self.tor_process = None
@@ -200,7 +200,7 @@ class WebScraper:
 
         data = {
             'client_version': self.VERSION,
-            'client_host': os.getenv('CLIENT_HOST'),
+            'client_host': CLIENT_HOST,
             'client_port': int(os.getenv('CLIENT_PORT')),
             'client_hostname': self.get_hostname(),
 

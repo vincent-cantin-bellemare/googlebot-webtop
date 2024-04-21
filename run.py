@@ -64,7 +64,7 @@ class Runner:
         subprocess.run(exec_commands)
 
     def run_docker_app_root(self, number):
-        # nohup docker exec -it -u root googlebotwebtop-client6-1 bash -c "cd /app && bash install.sh" &
+        # docker exec -it -u root googlebotwebtop-client21-1 bash -c "cd /app && bash install.sh"
         exec_commands = [
             'docker',
             'exec',
