@@ -158,7 +158,7 @@ class WebScraper:
             image = image.resize((max_width, new_height), parameter)
 
             with io.BytesIO() as output:
-                image.save(output, format="JPEG", quality=40)
+                image.save(output, format="JPEG", quality=60)
                 compressed_screenshot = output.getvalue()
 
             screenshot_base64 = base64.b64encode(compressed_screenshot).decode('utf-8')
