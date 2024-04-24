@@ -23,7 +23,7 @@ def kill_tor_processes():
     log("All Tor processes have been killed.", color='green')
 
 
-def log(obj, content, color='blue'):
+def log(content, color='blue'):
     colors = {
         "red": "\033[91m",
         "green": "\033[92m",
@@ -38,13 +38,13 @@ def log(obj, content, color='blue'):
     color_code = colors.get(color, "")
     end_code = colors["end"]
 
-    hostname = obj.get_hostname()
+    hostname = get_hostname()
     hostname = hostname if hostname else 'unknown'
     port = os.getenv('CLIENT_PORT')
 
     print(f'{color_code}{port} ({hostname}) - {content}{end_code}')
 
 
-def sleep(obj, seconds):
+def sleep(seconds):
     log(f'Sleep:{seconds}', 'cyan')
     time.sleep(seconds)
