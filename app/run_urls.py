@@ -128,7 +128,7 @@ class WebScraper:
 
         while True:
             fetch_increment += 1
-            fetch_max_increment = 10
+            fetch_max_increment = 3
 
             try:
                 log(f'GoogleFetch:start({fetch_increment}/{fetch_max_increment}) ({request_dict["url"]})')
