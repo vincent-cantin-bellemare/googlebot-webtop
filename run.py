@@ -83,6 +83,7 @@ if __name__ == '__main__':
     parser.add_argument('--compose', action='store_true')
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--execresults', action='store_true')
+    parser.add_argument('--execurls', action='store_true')
     parser.add_argument('--fromindex', type=int, default=1)
     parser.add_argument('--toindex', type=int, default=20)
     args = parser.parse_args()
