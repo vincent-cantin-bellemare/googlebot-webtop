@@ -74,7 +74,7 @@ class WebScraper:
         self.tor_process = subprocess.Popen('start-tor-browser', shell=True)
 
     def pull_master_request(self):
-        pull_url = f'{MASTER_URL}/c/pull'
+        pull_url = f'{MASTER_URL}/clients/results/pull'
         self.log(f'PullMasterRequest:start ({pull_url})', 'blue')
 
         try:
@@ -102,7 +102,7 @@ class WebScraper:
         }
 
         try:
-            response = requests.post(f'{MASTER_URL}/c/push', data=json.dumps(data), headers=headers, timeout=10)
+            response = requests.post(f'{MASTER_URL}/clients/results/push', data=json.dumps(data), headers=headers, timeout=10)
         except Exception as e:
             self.log(f'PushMasterRequest:error1({e})', 'magenta')
             return self.push_master_request(data)
