@@ -135,7 +135,7 @@ class WebScraper:
                 self.client.navigate(request_dict['url'])
             except Exception as e:
                 log(f'GoogleFetch:error ({e})', 'red')
-                sleep(20)
+                sleep(5)
 
                 if fetch_increment > fetch_max_increment:
                     log(f'GoogleFetch:max_increment_reached', 'red')
