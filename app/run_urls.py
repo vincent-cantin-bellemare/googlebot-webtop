@@ -146,6 +146,8 @@ class WebScraper:
         fetch_to_datetime = datetime.datetime.now()
         fetch_duration = fetch_to_datetime - fetch_from_datetime
 
+        sleep(10)
+
         html = self.client.page_source
         log(f'GoogleFetch:end', 'blue')
 
