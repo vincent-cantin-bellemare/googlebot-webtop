@@ -49,6 +49,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             tor_client.navigate(url)
         except Exception as e:
             log(f'FetchUrl:error ({e})', 'red')
+            status_ok = False
             break
         else:
             log(f'FetchUrl:success ({url})', 'green')
