@@ -49,6 +49,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             tor_client.navigate(url)
         except Exception as e:
             log(f'FetchUrl:error ({e})', 'red')
+            sleep(3)
             status_ok = False
             break
         else:
@@ -57,11 +58,11 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             html = tor_client.page_source
             status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
 
-            if status_ok or fetch_increment >= fetch_max_increment:
-                break
-
             screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
             content_b64 = get_response_content_base64(tor_client)
+
+            if status_ok or fetch_increment >= fetch_max_increment:
+                break
 
     fetch_to_datetime = datetime.datetime.now()
     fetch_duration = fetch_to_datetime - fetch_from_datetime
