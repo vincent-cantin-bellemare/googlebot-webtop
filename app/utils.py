@@ -4,6 +4,7 @@ import time
 import io
 import json
 import requests
+import gzip
 import socket
 import subprocess
 import os
@@ -38,7 +39,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
     status_ok = None
     html = None
     screenshot_b64 = None
-    content_b64 = None
+    content_gzip_b64 = None
 
     while True:
         fetch_increment += 1
@@ -59,7 +60,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
 
             screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
-            content_b64 = get_response_content_base64(tor_client)
+            content_gzip_b64 = get_response_content_gzip_base64(tor_client)
 
             if status_ok or fetch_increment >= fetch_max_increment:
                 break
@@ -73,7 +74,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
         'status': status_ok,
         'html': html,
         'screenshot_b64': screenshot_b64,
-        'content_b64': content_b64,
+        'content_gzip_b64': content_gzip_b64,
     }
 
 def start_tor_process():
@@ -166,6 +167,11 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
 
 def get_response_content_base64(tor_client):
     return base64.b64encode(tor_client.page_source.encode('utf-8')).decode('utf-8')
+
+
+def get_response_content_gzip_base64(tor_client):
+    gzip_content = gzip.compress(tor_client.page_source.encode('utf-8'))
+    return base64.b64encode(gzip_content).decode('utf-8')
 
 
 def sleep(seconds):
