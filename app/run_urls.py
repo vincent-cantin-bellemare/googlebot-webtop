@@ -71,10 +71,11 @@ class WebScraper:
 
             if self.process_url():
                 sleep(5)
-            else:
-                terminate_tor_process(self.tor_process)
-                self.tor_process = None
-                sleep(5)
+
+            # else:
+            #     terminate_tor_process(self.tor_process)
+            #     self.tor_process = None
+            #     sleep(5)
 
 
 if __name__ == '__main__':
