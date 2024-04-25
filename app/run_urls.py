@@ -9,6 +9,8 @@ from utils import (
     start_tor_process,
     terminate_tor_process,
     start_tor_client,
+    compress_and_convert_screenshot_to_base64,
+    get_response_content_base64,
     fetch_url,
     log,
     sleep
@@ -48,8 +50,8 @@ class WebScraper:
             'response_duration': fetch_data['duration'],
             'response_increment': fetch_data['increment'],
             'response_status': 'true' if fetch_data['status'] else 'false',
-            'response_screenshot_b64': self.tor_client.compress_and_convert_screenshot_to_base64(),
-            'response_content_b64': self.tor_client.get_response_content_base64(),
+            'response_screenshot_b64': compress_and_convert_screenshot_to_base64(self.tor_client),
+            'response_content_b64': get_response_content_base64(self.tor_client),
         }
 
         try:
