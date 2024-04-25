@@ -72,8 +72,8 @@ class WebScraper:
             if self.process_url():
                 sleep(5)
             else:
-                terminate_tor_process(self.to_process)
-                self.to_process = None
+                terminate_tor_process(self.tor_process)
+                self.tor_process = None
                 sleep(5)
 
 
