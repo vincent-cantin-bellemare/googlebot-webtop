@@ -38,8 +38,8 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
     fetch_increment = 0
     status_ok = None
     html = None
-    screenshot_b64 = None
-    content_gzip_b64 = None
+    screenshot_b64 = ''
+    content_gzip_b64 = ''
 
     while True:
         fetch_increment += 1
@@ -73,8 +73,10 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
         'duration': int(round(fetch_duration.total_seconds(), 0)),
         'status': status_ok,
         'html': html,
-        'screenshot_b64': screenshot_b64,
-        'content_gzip_b64': content_gzip_b64,
+        'screenshot_b64_data': screenshot_b64,
+        'screenshot_b64_len': len(screenshot_b64),
+        'content_gzip_b64_data': content_gzip_b64,
+        'content_gzip_b64_len': len(content_gzip_b64),
     }
 
 def start_tor_process():
