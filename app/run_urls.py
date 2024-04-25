@@ -49,7 +49,7 @@ class WebScraper:
             'response_increment': fetch_data['increment'],
             'response_status': 'true' if fetch_data['status'] else 'false',
             'response_screenshot_b64': fetch_data['screenshot_b64'] if fetch_data['screenshot_b64'] else '',
-            'response_content_b64': fetch_data['content_gzip_b64'] if fetch_data['content_gzip_b64'] else '',
+            'response_content_gzip_b64': fetch_data['content_gzip_b64'] if fetch_data['content_gzip_b64'] else '',
         }
 
         try:
