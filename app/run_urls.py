@@ -74,11 +74,11 @@ class WebScraper:
             process_status = self.process_url()
 
             if process_status:
-                total_unsuccessful_requests = 0
+                self.total_unsuccessful_requests = 0
             else:
-                total_unsuccessful_requests += 1
+                self.total_unsuccessful_requests += 1
 
-            if total_unsuccessful_requests >= 5:
+            if self.total_unsuccessful_requests >= 5:
                 terminate_tor_process(self.tor_process)
                 self.tor_process = None
                 sleep(5)
