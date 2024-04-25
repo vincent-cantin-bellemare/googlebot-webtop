@@ -60,7 +60,7 @@ class WebScraper:
             log(f'PushMasterRequest:error ({e})', 'red')
             sleep(5)
 
-        return fetch_data['fetch_status']
+        return fetch_data['status']
 
     def run(self):
         while True:
