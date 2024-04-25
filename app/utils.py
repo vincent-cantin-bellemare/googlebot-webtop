@@ -56,8 +56,8 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             break
 
     return {
-        'fetch_increment': fetch_increment,
-        'fetch_duration': int(round(fetch_duration.total_seconds(), 0)),
+        'increment': fetch_increment,
+        'duration': int(round(fetch_duration.total_seconds(), 0)),
         'status': status_ok,
         'html': html,
     }

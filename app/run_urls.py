@@ -45,9 +45,9 @@ class WebScraper:
             # 'request_keyword_id': request_dict['keyword_id'],
             # 'request_locality_id': request_dict['locality_id'],
 
-            'response_duration': fetch_data['fetch_duration'],
-            'response_increment': fetch_data['fetch_increment'],
-            'response_status': 'true' if fetch_data['fetch_status'] else 'false',
+            'response_duration': fetch_data['duration'],
+            'response_increment': fetch_data['increment'],
+            'response_status': 'true' if fetch_data['status'] else 'false',
             'response_screenshot_b64': self.tor_client.compress_and_convert_screenshot_to_base64(),
             'response_content_b64': self.tor_client.get_response_content_base64(),
         }
