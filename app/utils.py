@@ -37,6 +37,8 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
     fetch_increment = 0
     status_ok = None
     html = None
+    screenshot_b64 = None
+    content_b64 = None
 
     while True:
         fetch_increment += 1
@@ -57,6 +59,9 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             if status_ok or fetch_increment >= fetch_max_increment:
                 break
 
+            screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
+            content_b64 = get_response_content_base64(tor_client)
+
     fetch_to_datetime = datetime.datetime.now()
     fetch_duration = fetch_to_datetime - fetch_from_datetime
 
@@ -65,6 +70,8 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
         'duration': int(round(fetch_duration.total_seconds(), 0)),
         'status': status_ok,
         'html': html,
+        'screenshot_b64': screenshot_b64,
+        'content_b64': content_b64,
     }
 
 def start_tor_process():
