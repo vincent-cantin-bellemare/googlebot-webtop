@@ -33,11 +33,13 @@ def kill_tor_processes():
 
 
 def fetch_url(tor_client, url, fetch_max_increment=1):
+    fetch_from_datetime = datetime.datetime.now()
+    fetch_increment = 0
+    status_ok = None
+    html = None
+
     while True:
-        fetch_from_datetime = datetime.datetime.now()
-        fetch_increment = 0
-        fetch_to_datetime = datetime.datetime.now()
-        fetch_duration = fetch_to_datetime - fetch_from_datetime
+        fetch_increment += 1
 
         log(f'FetchUrl:start ({url})', 'blue')
 
@@ -45,15 +47,18 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             tor_client.navigate(url)
         except Exception as e:
             log(f'FetchUrl:error ({e})', 'red')
-            return False
-
-        log(f'FetchUrl:end ({url})', 'blue')
-
-        html = tor_client.page_source
-        status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
-
-        if status_ok or fetch_increment >= fetch_max_increment:
             break
+        else:
+            log(f'FetchUrl:success ({url})', 'green')
+
+            html = tor_client.page_source
+            status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
+
+            if status_ok or fetch_increment >= fetch_max_increment:
+                break
+
+    fetch_to_datetime = datetime.datetime.now()
+    fetch_duration = fetch_to_datetime - fetch_from_datetime
 
     return {
         'increment': fetch_increment,
