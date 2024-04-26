@@ -1,255 +1,87 @@
-import base64
-import json
-import datetime
 import os
-import io
-from marionette_driver import marionette
-from PIL import Image
-import requests
-import subprocess
-import socket
-import time
 
 from config import MASTER_URL, CLIENT_HOST
+from utils import (
+    get_hostname,
+    pull_master_request,
+    push_master_request,
+    kill_tor_processes,
+    start_tor_process,
+    terminate_tor_process,
+    start_tor_client,
+    fetch_url,
+    log,
+    sleep
+)
 
 '''
-Script to scrape Google search results using Tor and Selenium
+Script to scrape URLS results using Tor and Marionette
 '''
 
 class WebScraper:
-    VERSION = '1.0.4'
+    VERSION = '2.0.4'
 
     def __init__(self):
         self.tor_process = None
-        self.client = None
+        self.tor_client = None
 
-    @classmethod
-    def get_hostname(obj):
+    def process_url(self):
         try:
-            hostname = socket.gethostname()
-        except:
-            return 'unknown'
-        else:
-            return hostname
-
-    @classmethod
-    def kill_tor_processes(obj):
-        ps_output = subprocess.check_output(["ps", "aux"]).decode('utf-8')
-        for line in ps_output.split("\n"):
-            if "marionette" in line:
-                pid = int(line.split()[1])
-                obj.log(f"Killing process with PID: {pid}")
-                subprocess.run(["kill", '-9', str(pid)])
-        obj.log("All Tor processes have been killed.", color='green')
-
-    @classmethod
-    def log(obj, content, color='blue'):
-        colors = {
-            "red": "\033[91m",
-            "green": "\033[92m",
-            "yellow": "\033[93m",
-            "blue": "\033[94m",
-            "magenta": "\033[95m",
-            "cyan": "\033[96m",
-            "white": "\033[97m",
-            "end": "\033[0m",  # Reset la couleur
-        }
-
-        color_code = colors.get(color, "")
-        end_code = colors["end"]
-
-        hostname = obj.get_hostname()
-        hostname = hostname if hostname else 'unknown'
-        port = os.getenv('CLIENT_PORT')
-
-        print(f'{color_code}{port} ({hostname}) - {content}{end_code}')
-
-    @classmethod
-    def sleep(obj, seconds):
-        obj.log(f'Sleep:{seconds}', 'cyan')
-        time.sleep(seconds)
-
-    def start_tor(self):
-        self.log('Tor:start', 'blue')
-        self.tor_process = subprocess.Popen('start-tor-browser', shell=True)
-
-    def pull_master_request(self):
-        pull_url = f'{MASTER_URL}/clients/results/pull'
-        self.log(f'PullMasterRequest:start ({pull_url})', 'blue')
-
-        try:
-            response = requests.get(pull_url, timeout=30)
+            request_dict = pull_master_request(f'{MASTER_URL}/clients/results/pull')
         except Exception as e:
-            self.log(f'PullMasterRequest:error({e})', 'red')
-            self.sleep(10)
-            return self.pull_master_request()
-        else:
-            try:
-                response_json = response.json()
-            except Exception as e:
-                self.log(f'PullMasterRequest:error({e})', 'red')
-                self.sleep(3)
-                return self.pull_master_request()
-            else:
-                self.log(f'PullMasterRequest:end', 'green')
-                return response_json
+            log(f'PullMasterRequest:error ({e})', 'red')
+            return True # Normal return
 
-    def push_master_request(self, data):
-        self.log(f'PushMasterRequest:start', 'blue')
-
-        headers = {
-            'Content-Type': 'application/json',
-        }
-
-        try:
-            response = requests.post(f'{MASTER_URL}/clients/results/push', data=json.dumps(data), headers=headers, timeout=10)
-        except Exception as e:
-            self.log(f'PushMasterRequest:error1({e})', 'magenta')
-            return self.push_master_request(data)
-        else:
-            try:
-                response_json = response.json()
-            except Exception as e:
-                self.log(f'PushMasterRequest:error2({e})', 'red')
-                self.sleep(3)
-                return self.push_master_request(data)
-            else:
-                try:
-                    client_status = response_json['status']
-                except:
-                    self.log(f'PushMasterRequest:error3({e})', 'red')
-                    self.sleep(3)
-                    return self.push_master_request(data)
-
-                if client_status is False:
-                    self.log(f'PushMasterRequest:error4(status=False)', 'red')
-                    self.sleep(3)
-                    return self.push_master_request(data)
-                else:
-                    try:
-                        client_identifier = response_json['identifier']
-                    except Exception as e:
-                        self.log(f'PushMasterRequest:error5({e})', 'red')
-                        self.sleep(3)
-                        return self.push_master_request(data)
-                    else:
-                        self.log(f'PushMasterRequest:end ({client_identifier})', 'green')
-
-                return response_json
-
-    def compress_and_convert_screenshot_to_base64(self, compress=True):
-        screenshot_binary = self.client.screenshot(format='binary', full=True, scroll=True)
-
-        if compress:
-            image = Image.open(io.BytesIO(screenshot_binary))
-
-            if image.mode == 'RGBA':
-                image = image.convert('RGB')
-
-            max_width = 600
-            ratio = max_width / image.width
-            new_height = int(image.height * ratio)
-
-            try:
-                parameter = Image.ANTIALIAS
-            except :
-                parameter = Image.Resampling.LANCZOS
-
-            image = image.resize((max_width, new_height), parameter)
-
-            with io.BytesIO() as output:
-                image.save(output, format="JPEG", quality=60)
-                compressed_screenshot = output.getvalue()
-
-            screenshot_base64 = base64.b64encode(compressed_screenshot).decode('utf-8')
-        else:
-            screenshot_base64 = base64.b64encode(screenshot_binary).decode('utf-8')
-
-        return screenshot_base64
-
-    def google_fetch(self):
-        fetch_from_datetime = datetime.datetime.now()
-        fetch_increment = 0
-
-        request_dict = self.pull_master_request()
-
-        while True:
-            fetch_increment += 1
-            fetch_max_increment = 10
-
-            try:
-                self.log(f'GoogleFetch:start({fetch_increment}/{fetch_max_increment}) ({request_dict["url"]})')
-                self.client.navigate(request_dict['url'])
-            except Exception as e:
-                self.log(f'GoogleFetch:error ({e})', 'red')
-                self.sleep(20)
-
-                if fetch_increment > fetch_max_increment:
-                    self.log(f'GoogleFetch:max_increment_reached', 'red')
-                    return False
-            else:
-                break
-
-        fetch_to_datetime = datetime.datetime.now()
-        fetch_duration = fetch_to_datetime - fetch_from_datetime
-
-        html = self.client.page_source
-        self.log(f'GoogleFetch:end', 'blue')
-
-        status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
+        fetch_data = fetch_url(self.tor_client, request_dict['url'], 3)
 
         data = {
             'client_version': self.VERSION,
             'client_host': CLIENT_HOST,
             'client_port': int(os.getenv('CLIENT_PORT')),
-            'client_hostname': self.get_hostname(),
+            'client_hostname': get_hostname(),
 
             'request_url': request_dict['url'],
+            'request_identifier': request_dict['identifier'],
             'request_keyword_id': request_dict['keyword_id'],
             'request_locality_id': request_dict['locality_id'],
 
-            'response_duration': int(round(fetch_duration.total_seconds(), 0)),
-            'response_increment': fetch_increment,
-            'response_status': 'true' if status_ok else 'false',
-            'response_screenshot_b64': self.compress_and_convert_screenshot_to_base64(),
-            'response_content_b64': base64.b64encode(self.client.page_source.encode('utf-8')).decode('utf-8'),
+            'response_duration': fetch_data['duration'],
+            'response_increment': fetch_data['increment'],
+            'response_status': 'true' if fetch_data['status'] else 'false',
+            'response_screenshot_b64': fetch_data['screenshot_b64'],
+            'response_content_gzip_b64': fetch_data['content_gzip_b64'],
         }
 
-        if not status_ok:
-            self.log(f'GoogleFetch:detected_traffic', 'blue')
-
         try:
-            self.push_master_request(data)
+            push_master_request(f'{MASTER_URL}/clients/results/push', data)
         except Exception as e:
-            self.log(f'PushMasterRequest:error ({e})', 'red')
-            self.sleep(5)
-        else:
-            self.log(f'PushMasterRequest:success', 'green')
+            log(f'PushMasterRequest:error ({e})', 'red')
+            sleep(5)
 
-        return status_ok
+        return fetch_data['status']
 
     def run(self):
+        self.total_unsuccessful_requests = 0
+
         while True:
             if self.tor_process is None:
-                self.kill_tor_processes()
+                kill_tor_processes()
+                sleep(3)
+                self.tor_process = start_tor_process()
+                sleep(10)
+                self.tor_client = start_tor_client()
 
-                self.sleep(3)
+            process_status = self.process_url()
 
-                self.start_tor()
-                self.sleep(10)
-
-                self.client = marionette.Marionette(host='localhost', port=2828, socket_timeout=60)
-                self.client.start_session()
-
-            if self.google_fetch():
-                self.sleep(5)
+            if process_status:
+                self.total_unsuccessful_requests = 0
             else:
-                self.log('Tor:terminate', 'blue')
-                self.tor_process.terminate()
-                self.tor_process = None
-                self.log('Tor:terminated', 'blue')
-                self.sleep(5)
+                self.total_unsuccessful_requests += 1
 
+            if self.total_unsuccessful_requests >= 5:
+                terminate_tor_process(self.tor_process)
+                self.tor_process = None
+                sleep(5)
 
 if __name__ == '__main__':
     scraper = WebScraper()
