@@ -147,7 +147,7 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
         if image.mode == 'RGBA':
             image = image.convert('RGB')
 
-        max_width = 600
+        max_width = 1000
         ratio = max_width / image.width
         new_height = int(image.height * ratio)
 
@@ -159,7 +159,7 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
         image = image.resize((max_width, new_height), parameter)
 
         with io.BytesIO() as output:
-            image.save(output, format="JPEG", quality=60)
+            image.save(output, format="JPEG", quality=70)
             compressed_screenshot = output.getvalue()
 
         screenshot_base64 = base64.b64encode(compressed_screenshot).decode('utf-8')
