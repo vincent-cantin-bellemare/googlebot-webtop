@@ -63,7 +63,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             content_b64 = get_response_content_base64(tor_client)
             content_gzip_b64 = get_response_content_gzip_base64(tor_client)
 
-            log('FetchUrl:content_len (%d/%d)' % (content_b64, content_gzip_b64))
+            log('FetchUrl:content_len (%d/%d)' % (len(content_b64), len(content_gzip_b64)))
 
             if status_ok or fetch_increment >= fetch_max_increment:
                 break
