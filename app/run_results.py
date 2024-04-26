@@ -60,8 +60,6 @@ class WebScraper:
         return fetch_data['status']
 
     def run(self):
-        self.total_unsuccessful_requests = 0
-
         while True:
             if self.tor_process is None:
                 kill_tor_processes()
@@ -73,12 +71,7 @@ class WebScraper:
             process_status = self.process_url()
             sleep(1)
 
-            if process_status:
-                self.total_unsuccessful_requests = 0
-            else:
-                self.total_unsuccessful_requests += 1
-
-            if self.total_unsuccessful_requests >= 5:
+            if not process_status:
                 terminate_tor_process(self.tor_process)
                 self.tor_process = None
                 sleep(5)
