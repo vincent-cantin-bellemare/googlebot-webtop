@@ -60,7 +60,10 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
 
             screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
+            content_b64 = get_response_content_base64(tor_client)
             content_gzip_b64 = get_response_content_gzip_base64(tor_client)
+
+            log('FetchUrl:content_len (%d/%d)' % (content_b64, content_gzip_b64))
 
             if status_ok or fetch_increment >= fetch_max_increment:
                 break
