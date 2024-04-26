@@ -72,6 +72,7 @@ class WebScraper:
                 self.tor_client = start_tor_client()
 
             process_status = self.process_url()
+            sleep(1)
 
             if process_status:
                 self.total_unsuccessful_requests = 0

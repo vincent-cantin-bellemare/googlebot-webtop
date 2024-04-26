@@ -41,7 +41,6 @@ class WebScraper:
             'client_hostname': get_hostname(),
 
             'request_url': request_dict['url'],
-            'request_identifier': request_dict['identifier'],
             'request_keyword_id': request_dict['keyword_id'],
             'request_locality_id': request_dict['locality_id'],
 
@@ -72,6 +71,7 @@ class WebScraper:
                 self.tor_client = start_tor_client()
 
             process_status = self.process_url()
+            sleep(1)
 
             if process_status:
                 self.total_unsuccessful_requests = 0
