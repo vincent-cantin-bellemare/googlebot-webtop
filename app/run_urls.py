@@ -1,6 +1,5 @@
 import os
 import sentry_sdk
-import random
 
 from config import CLIENT_HOST, MASTER_URL, SENTRY_DSN
 from utils import (
@@ -36,9 +35,6 @@ class WebScraper:
             )
 
     def process_url(self):
-        if random.randint(0, 100) == 50:
-            raise Exception('Random Exception')
-
         try:
             request_dict = pull_master_request(f'{MASTER_URL}/clients/urls/pull')
         except Exception as e:

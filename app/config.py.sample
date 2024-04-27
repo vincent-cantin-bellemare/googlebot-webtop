@@ -1,4 +1,4 @@
 # Configurations for the app
 CLIENT_HOST = 'googlebot-client-2'
 MASTER_URL = 'http://192.168.2.187:8000'
-SENTRY_DSN = "http://...@192.168.2.198:9000/3"
+SENTRY_DSN = "http://...@192.168.2.201:9000/3"
