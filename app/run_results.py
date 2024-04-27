@@ -1,6 +1,7 @@
 import os
+import sentry_sdk
 
-from config import MASTER_URL, CLIENT_HOST
+from config import MASTER_URL, SENTRY_DSN, CLIENT_HOST
 from utils import (
     get_hostname,
     pull_master_request,
@@ -14,6 +15,7 @@ from utils import (
     sleep
 )
 
+
 '''
 Script to scrape URLS results using Tor and Marionette
 '''
@@ -24,6 +26,14 @@ class WebScraper:
     def __init__(self):
         self.tor_process = None
         self.tor_client = None
+        self.__init_sentry()
+
+    def __init_sentry(self):
+        if SENTRY_DSN:
+            sentry_sdk.init(
+                dsn=SENTRY_DSN,
+                traces_sample_rate=1.0,
+            )
 
     def process_url(self):
         try:
@@ -79,3 +89,4 @@ class WebScraper:
 if __name__ == '__main__':
     scraper = WebScraper()
     scraper.run()
+
