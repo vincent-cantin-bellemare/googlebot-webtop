@@ -21,183 +21,201 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  # client2:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3020
-  #     - PORT=3020
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3020:3000
-  #     - 3021:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3020
+      - PORT=3020
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3020:3000
+      - 3021:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client3:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3030
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3030:3000
-  #     - 3031:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3030
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3030:3000
+      - 3031:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client4:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3040
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3040:3000
-  #     - 3041:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3040
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3040:3000
+      - 3041:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client5:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3050
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3050:3000
-  #     - 3051:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client5:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3050
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3050:3000
+      - 3051:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client6:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3060
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3060:3000
-  #     - 3061:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client6:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3060
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3060:3000
+      - 3061:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client7:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3070
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3070:3000
-  #     - 3071:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3070
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3070:3000
+      - 3071:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client8:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3080
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3080:3000
-  #     - 3081:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client8:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3080
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3080:3000
+      - 3081:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client9:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3090
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3090:3000
-  #     - 3091:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client9:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3090
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3090:3000
+      - 3091:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
 
-  # client10:
-  #   image: lscr.io/linuxserver/webtop:ubuntu-mate
-  #   security_opt:
-  #     - seccomp:unconfined #optional
-  #   entrypoint: [/init]
-  #   volumes:
-  #     - ./app:/app
-  #   environment:
-  #     - CLIENT_PORT=3100
-  #     - PUID=5001
-  #     - PGID=5001
-  #     - TZ=Etc/UTC
-  #     - SUBFOLDER=/ #optional
-  #     - TITLE=Webtop #optional
-  #   ports:
-  #     - 3100:3000
-  #     - 3101:3001
-  #   shm_size: "1gb" #optional
-  #   restart: unless-stopped
+  client10:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined #optional
+    entrypoint: [/init]
+    volumes:
+      - ./app:/app
+    environment:
+      - CLIENT_PORT=3100
+      - PUID=5001
+      - PGID=5001
+      - TZ=Etc/UTC
+      - SUBFOLDER=/ #optional
+      - TITLE=Webtop #optional
+    ports:
+      - 3100:3000
+      - 3101:3001
+    shm_size: "1gb" #optional
+    restart: unless-stopped
