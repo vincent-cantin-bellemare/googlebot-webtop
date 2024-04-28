@@ -1,4 +1,6 @@
 FROM vincentcodevolution/webtopubuntumate:latest
+# FROM lscr.io/linuxserver/webtop:ubuntu-mate
+# FROM lscr.io/linuxserver/webtop:debian-xfce
 
 RUN echo "v0.0.1" > /version.txt
 
