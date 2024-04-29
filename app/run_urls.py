@@ -41,33 +41,35 @@ class WebScraper:
             log(f'PullMasterRequest:error ({e})', 'red')
             return True # Normal return
 
-        fetch_data = fetch_url(self.tor_client, request_dict['url'], 3)
+        if request_dict['url']:
+            fetch_data = fetch_url(self.tor_client, request_dict['url'], 3)
 
-        data = {
-            'client_version': self.VERSION,
-            'client_host': CLIENT_HOST,
-            'client_port': int(os.getenv('CLIENT_PORT')),
-            'client_hostname': get_hostname(),
+            data = {
+                'client_version': self.VERSION,
+                'client_host': CLIENT_HOST,
+                'client_port': int(os.getenv('CLIENT_PORT')),
+                'client_hostname': get_hostname(),
 
-            'request_url': request_dict['url'],
-            'request_identifier': request_dict['identifier'],
-            # 'request_keyword_id': request_dict['keyword_id'],
-            # 'request_locality_id': request_dict['locality_id'],
+                'request_url': request_dict['url'],
+                'request_identifier': request_dict['identifier'],
 
-            'response_duration': fetch_data['duration'],
-            'response_increment': fetch_data['increment'],
-            'response_status': 'true' if fetch_data['status'] else 'false',
-            'response_screenshot_b64': fetch_data['screenshot_b64'],
-            'response_content_gzip_b64': fetch_data['content_gzip_b64'],
-        }
+                'response_duration': fetch_data['duration'],
+                'response_increment': fetch_data['increment'],
+                'response_status': 'true' if fetch_data['status'] else 'false',
+                'response_screenshot_b64': fetch_data['screenshot_b64'],
+                'response_content_gzip_b64': fetch_data['content_gzip_b64'],
+            }
 
-        try:
-            push_master_request(f'{MASTER_URL}/clients/urls/push', data)
-        except Exception as e:
-            log(f'PushMasterRequest:error ({e})', 'red')
+            try:
+                push_master_request(f'{MASTER_URL}/clients/urls/push', data)
+            except Exception as e:
+                log(f'PushMasterRequest:error ({e})', 'red')
+                sleep(5)
+
+            return fetch_data['status']
+        else:
             sleep(5)
-
-        return fetch_data['status']
+            return True
 
     def run(self):
         self.total_unsuccessful_requests = 0
