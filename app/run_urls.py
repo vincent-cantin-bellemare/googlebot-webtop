@@ -20,7 +20,7 @@ Script to scrape URLS results using Tor and Marionette
 '''
 
 class WebScraper:
-    VERSION = '2.0.4'
+    VERSION = '2.0.5'
 
     def __init__(self):
         self.tor_process = None

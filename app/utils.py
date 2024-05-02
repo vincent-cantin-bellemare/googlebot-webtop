@@ -57,7 +57,10 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             log(f'FetchUrl:success ({url})', 'green')
 
             html = tor_client.page_source
-            status_ok = html.find('Nos systèmes ont détecté un') == -1 and html.find('Ce réseau est bloqué') == -1
+            status_ok = \
+                html.find('Nos systèmes ont détecté un') == -1 and \
+                html.find('Ce réseau est bloqué') == -1 and \
+                html.find('Our systems have detected') == -1
 
             screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
             content_b64 = get_response_content_base64(tor_client)
