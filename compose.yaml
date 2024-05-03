@@ -1,8 +1,6 @@
 services:
   client1:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -22,9 +20,7 @@ services:
     restart: unless-stopped
 
   client2:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -45,9 +41,7 @@ services:
     restart: unless-stopped
 
   client3:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -67,9 +61,7 @@ services:
     restart: unless-stopped
 
   client4:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -89,9 +81,7 @@ services:
     restart: unless-stopped
 
   client5:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -111,9 +101,7 @@ services:
     restart: unless-stopped
 
   client6:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -133,9 +121,7 @@ services:
     restart: unless-stopped
 
   client7:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -155,9 +141,7 @@ services:
     restart: unless-stopped
 
   client8:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -177,9 +161,7 @@ services:
     restart: unless-stopped
 
   client9:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
@@ -199,9 +181,7 @@ services:
     restart: unless-stopped
 
   client10:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]

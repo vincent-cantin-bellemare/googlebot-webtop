@@ -26,6 +26,7 @@ python3 run.py --execurls --fromindex 1 --toindex 11
 ```sh
 mkdir tor/ && cd tor/
 wget -q -O ./tor-browser-linux64.tar.xz "https://www.torproject.org/dist/torbrowser/13.0.14/tor-browser-linux-x86_64-13.0.14.tar.xz"
+sudo docker build -t googlebot-client:1.0.0 .
 ```
 
 Ubuntu Installation
@@ -40,4 +41,11 @@ sudo docker ps
 sudo snap disable docker
 sudo snap enable docker
 sudo docker ps
+```
+
+## Start Project
+
+```sh
+mkdir ./volumes/client1
+cp -R volumes/_template/ volumes/client2/
 ```

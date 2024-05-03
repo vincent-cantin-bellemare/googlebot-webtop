@@ -21,6 +21,8 @@ RUN mkdir -p /opt/tor-browser && \
     chmod +x /usr/local/bin/start-tor-browser && \
     chown -R 5001:5001 /opt/tor-browser
 
+COPY user.js /opt/tor-browser/Browser/TorBrowser/Data/Browser/profile.default/user.js
+
 COPY app/requirements.txt /app/requirements.txt
 RUN python3.11 -m venv /venv
 RUN /venv/bin/pip install -r /app/requirements.txt
