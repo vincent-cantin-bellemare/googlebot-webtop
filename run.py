@@ -7,7 +7,7 @@ import subprocess
 
 
 class Runner:
-    PROJECT_NAME = "googlebotwebtop"
+    PROJECT_NAME = "googlebot-webtop"
 
     def log(self, message):
         """ Logs a message """
@@ -84,6 +84,7 @@ if __name__ == '__main__':
     parser.add_argument('--build', action='store_true')
     parser.add_argument('--execresults', action='store_true')
     parser.add_argument('--execurls', action='store_true')
+    parser.add_argument('--execdomainsqueries', action='store_true')
     parser.add_argument('--fromindex', type=int, default=1)
     parser.add_argument('--toindex', type=int, default=20)
     args = parser.parse_args()
@@ -108,7 +109,7 @@ if __name__ == '__main__':
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && python3 run_results.py"]))
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_results.py"]))
             thread.start()
             runner.sleep(5)
     elif args.execurls:
@@ -116,7 +117,15 @@ if __name__ == '__main__':
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && python3 run_urls.py"]))
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_urls.py"]))
+            thread.start()
+            runner.sleep(5)
+    elif args.execdomainsqueries:
+        runner.log('Exec Domains Queries...')
+
+        for client_id in range(args.fromindex, args.toindex + 1):
+            runner.log(f'Starting app {client_id}/{args.toindex}...')
+            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_domainsqueries.py"]))
             thread.start()
             runner.sleep(5)
     else:

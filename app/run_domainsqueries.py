@@ -16,7 +16,7 @@ from utils import (
 )
 
 '''
-Script to scrape URLS results using Tor and Marionette
+Script to scrape Domains Queries using Tor and Marionette
 '''
 
 class WebScraper:
@@ -36,7 +36,7 @@ class WebScraper:
 
     def process_url(self):
         try:
-            request_dict = pull_master_request(f'{MASTER_URL}/clients/urls/pull')
+            request_dict = pull_master_request(f'{MASTER_URL}/clients/domainsqueries/pull')
         except Exception as e:
             log(f'PullMasterRequest:error ({e})', 'red')
             return True # Normal return
@@ -61,7 +61,7 @@ class WebScraper:
             }
 
             try:
-                push_master_request(f'{MASTER_URL}/clients/urls/push', data)
+                push_master_request(f'{MASTER_URL}/clients/domainsqueries/push', data)
             except Exception as e:
                 log(f'PushMasterRequest:error ({e})', 'red')
                 sleep(5)

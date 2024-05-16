@@ -2,35 +2,20 @@
 
 ## Installation
 
-### Manuellement
-
 ```sh
-docker compose -p googlebotwebtop -f compose-clients.yaml down
-docker compose -p googlebotwebtop -f compose-clients.yaml up --detach
-docker exec -it -u abc googlebotwebtop-client1-1 bash -c 'cd /app && python3 run.py'
-docker exec -it -u abc googlebotwebtop-client2-1 bash -c 'cd /app && python3 run.py'
-docker exec -it -u abc googlebotwebtop-client3-1 bash -c 'cd /app && python3 run.py'
+cp config.py.sample config.py
+mkdir tor/ && cd tor/
+wget -q -O ./tor-browser-linux64.tar.xz "https://www.torproject.org/dist/torbrowser/13.0.14/tor-browser-linux-x86_64-13.0.14.tar.xz"
+cd ..
+docker build -t googlebot-client:1.0.0 .
+docker compose up -d
 ```
 
-### Avec le script run
+### Scripts run
 
 ```sh
 python3 run.py --compose
 python3 run.py --build --fromindex 1 --toindex 11
 python3 run.py --execresults --fromindex 1 --toindex 11
 python3 run.py --execurls --fromindex 1 --toindex 11
-```
-
-Ubuntu Installation
-
-```sh
-sudo apt install nfs-common
-sudo addgroup --system docker
-sudo adduser $USER docker
-newgrp docker
-sudo usermod -aG docker $USER
-sudo docker ps
-sudo snap disable docker
-sudo snap enable docker
-sudo docker ps
 ```
