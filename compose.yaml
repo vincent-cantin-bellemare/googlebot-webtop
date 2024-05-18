@@ -136,7 +136,7 @@ services:
       - TITLE=Webtop #optional
     ports:
       - 3070:3000
-      - 3071:3001
+
     shm_size: "1gb" #optional
     restart: unless-stopped
 
