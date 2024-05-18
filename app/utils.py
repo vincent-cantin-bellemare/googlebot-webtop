@@ -70,6 +70,7 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
             log('FetchUrl:content_len (%d/%d)' % (len(content_b64), len(content_gzip_b64)))
 
             if status_ok or fetch_increment >= fetch_max_increment:
+                time.sleep(1)
                 break
 
     fetch_to_datetime = datetime.datetime.now()

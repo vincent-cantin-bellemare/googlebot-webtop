@@ -20,7 +20,7 @@ Script to scrape Domains Queries using Tor and Marionette
 '''
 
 class WebScraper:
-    VERSION = '2.0.5'
+    VERSION = '2.0.6'
 
     def __init__(self):
         self.tor_process = None
