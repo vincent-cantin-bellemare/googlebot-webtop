@@ -16,4 +16,5 @@ docker compose up -d
 ```sh
 python3 run.py --execresults --fromindex 1 --toindex 11
 python3 run.py --execurls --fromindex 1 --toindex 11
+python3 run.py --exedomainsqueries --fromindex 1 --toindex 11
 ```
