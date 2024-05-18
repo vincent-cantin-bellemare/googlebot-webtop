@@ -1,5 +1,5 @@
 services:
-  client01:
+  client1:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -19,7 +19,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client02:
+  client2:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -40,7 +40,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client03:
+  client3:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -60,7 +60,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client04:
+  client4:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -80,7 +80,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client05:
+  client5:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -100,7 +100,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client06:
+  client6:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -120,7 +120,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client07:
+  client7:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -136,11 +136,11 @@ services:
       - TITLE=Webtop #optional
     ports:
       - 3070:3000
-
+      - 3071:3001
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client08:
+  client8:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
@@ -160,7 +160,7 @@ services:
     shm_size: "1gb" #optional
     restart: unless-stopped
 
-  client09:
+  client9:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
