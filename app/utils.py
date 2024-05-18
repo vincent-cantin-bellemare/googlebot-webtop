@@ -61,7 +61,9 @@ def fetch_url(tor_client, url, fetch_max_increment=1):
                 html.find('Nos systèmes ont détecté un') == -1 and \
                 html.find('Ce réseau est bloqué') == -1 and \
                 html.find('Before you continue to Google') == -1 and \
-                html.find('Bevor Sie zu Google') == -1
+                html.find('Voordat je verdagaat') == -1 and \
+                html.find('Bevor Sie zu Google') == -1 and \
+                html.find('https://consent.google.com/ml?continue') == -1
 
             screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
             content_b64 = get_response_content_base64(tor_client)
