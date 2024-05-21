@@ -134,22 +134,25 @@ def pull_master_request(pull_url):
 
 
 def push_master_request(push_url, data):
-    log(f'PushMasterRequest:start', 'blue')
+    log('PushMasterRequest:start', 'blue')
 
     headers = {
         'Content-Type': 'application/json',
     }
 
     response = requests.post(push_url, data=json.dumps(data), headers=headers, timeout=10)
-    response_json = response.json()
-    return response_json
+    return response.json()
 
 
 def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
     screenshot_binary = tor_client.screenshot(format='binary', full=True, scroll=True)
 
     if compress:
-        image = Image.open(io.BytesIO(screenshot_binary))
+        try:
+            image = Image.open(io.BytesIO(screenshot_binary))
+        except Exception as e:
+            log(f'CompressAndConvertScreenshotToBase64:error ({e})', 'red')
+            return ''
 
         if image.mode == 'RGBA':
             image = image.convert('RGB')
