@@ -2,7 +2,9 @@ __old/
 config.py
 .DS_Store
 .env
+.log
 *.tar
 __pycache__
 venv/
 tor/
+logs/

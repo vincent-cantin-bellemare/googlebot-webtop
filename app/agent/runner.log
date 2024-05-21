@@ -1,0 +1,1426 @@
+2024-05-21 22:40:43,681 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 22:40:43,682 - googlebot-webtop - INFO - Starting app 4/5...
+2024-05-21 22:40:43,683 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 22:40:43,683 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:40:48,684 - googlebot-webtop - INFO - Starting app 5/5...
+2024-05-21 22:40:48,685 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 22:40:48,685 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:58:13,683 - googlebot-webtop - INFO - Output: [94m3050 (f4580fd485db) - Killing process with PID: 2385[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.brissonpaysagiste.ca/savoir-faire/menuiserie/)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (https://www.brissonpaysagiste.ca/savoir-faire/menuiserie/)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (5016/1696)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.demenagementproactif.ca/contact)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (https://www.demenagementproactif.ca/contact)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (168/136)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.therecordco.org/rehearse/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://ca.jooble.org/away/-5465649194798432831)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://15track.com/fr/dpd-suivi/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.lepalierjuridique.com/droit-familial/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://laundrytogo.ca/covidInfo)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 3014[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://iptv365days.com/nos-formations/formations-courtes/creation-de-site-web)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 3556[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://reno-cuisine.com/contact/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 3947[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (http://www.goway.com/contact)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 4321[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (http://fr.thebestwefind.com)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (http://fr.thebestwefind.com)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (21240/6896)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://meetmylawyer.fr/espace-client/)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (https://meetmylawyer.fr/espace-client/)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (64084/17028)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://fr.siftforanswers.com/ar?q=%7bkeyword%7d)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (https://fr.siftforanswers.com/ar?q=%7bkeyword%7d)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (83876/13912)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://gogograndparent.com/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.zappmedia.com/office/about-zappmedia.html)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://eequebec.com/formation/ateliers/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.booking.com/hotel/fr/t2-pieds-dans-l-eau.fr.html)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://charlesmenage.com/menage-residentiel/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 4727[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://protecmi.com/contact/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 5347[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (http://howly.com/info/how-it-works/)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (http://howly.com/info/how-it-works/)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (97224/28276)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.ammco.ca/education/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.tlctranslation.com/interpreting/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (http://studioyvesamyot.com)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (http://popularpays.com/case-studies/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://summersmiles.com/fr/ajustement-du-ph-de-la-piscine-routine/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 5744[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://proprioinvestissement.com/fr/plus-de-versions-de-widgets/)[0m
+[92m3050 (f4580fd485db) - FetchUrl:success (https://proprioinvestissement.com/fr/plus-de-versions-de-widgets/)[0m
+[94m3050 (f4580fd485db) - FetchUrl:content_len (61824/12416)[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://esthetiquepurebeaute.com/pages/l-equipe)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://dermaminceur.ca/service/couperose-et-capillaires/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.gestigroupe.net/entretien-menager-residentiel.php)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://equipejeanguyayotte.com/nous-contacter/)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.telus.com/en/qc/smarthome-security/deals-and-bundles/systeme-alarme)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Please start a session)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 6190[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.ifs.com/ja/solutions)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+
+2024-05-21 22:58:13,685 - googlebot-webtop - INFO - Output: [94m3040 (4313b12ac674) - Killing process with PID: 1484[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.seddiauthor.com/)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (http://www.seddiauthor.com/)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (5016/1696)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.microage.ca/nos-formations/titres-professionnel-rncp/185.220.100.254)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.ericboizettephotographe.com/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.lindt.ca/en/shop-lindt/format/Boxes)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.lelabmastering.com)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.massotherapieenergievitale.com/149.202.79.101)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 2258[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.pharmamarket.fr/soins-beaute-hygiene.html)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (https://www.pharmamarket.fr/soins-beaute-hygiene.html)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (891036/111764)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://monsieurjean.ca/nos-formations/formations-courtes/creation-de-site-web)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.hypnosekarolyneberube.com/réserver-en-ligne)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://ca.fullscript.com/practitioner-signup)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.redhat.com/en/about/company)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.kensingtontours.com)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 2658[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.punktum.eu/leistungen/beratung-strategie)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 3065[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://logoneom.com/192.42.116.196)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 3494[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://monespaceatelier.com/contact)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (http://monespaceatelier.com/contact)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (95184/21540)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.funbooker.com/fr/place/paris)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.infiltrationmontreal.com/infiltration-eau)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.servirplus.qc.ca/a-propos.html)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.pogzmedia.com/beach-flag-drapeau-publicitaire/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://excelsoins.com/nos-formations/formations-courtes/creation-de-site-web)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 3942[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://kartoucheplus.com/contact)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (http://kartoucheplus.com/contact)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (9204/4008)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://evaluationatrium.com/contact/)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (https://evaluationatrium.com/contact/)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (141584/29084)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://praliniere.com/pages/cremerie-et-chocolaterie-saint-georges-de-beauce)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (https://praliniere.com/pages/cremerie-et-chocolaterie-saint-georges-de-beauce)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (217344/56032)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://groupesolutionsinistre.com/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.ofx.com/en-ie/business/global-payment-solutions/paying-overseas-suppliers/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://coupedegazon.ca/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.yanous.com)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.bouyguestelecom.fr/forfait-internet-mobile)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 4375[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://drainfortin.ca/politique-de-temoins/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - Tor:terminate[0m
+[94m3040 (4313b12ac674) - Tor:terminated[0m
+[96m3040 (4313b12ac674) - Sleep:5[0m
+[94m3040 (4313b12ac674) - Killing process with PID: 5069[0m
+[92m3040 (4313b12ac674) - All Tor processes have been killed.[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - Tor:start[0m
+[96m3040 (4313b12ac674) - Sleep:10[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.acces-impot.com/fr/contact/)[0m
+[92m3040 (4313b12ac674) - FetchUrl:success (https://www.acces-impot.com/fr/contact/)[0m
+[94m3040 (4313b12ac674) - FetchUrl:content_len (186420/37260)[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (http://www.trafalgar.com/en-eu/ways-to-go/solo-travel)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Connection timed out after 60.0s)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://boulzeye.ca/jeux-devasion/)[0m
+[91m3040 (4313b12ac674) - FetchUrl:error (Please start a session)[0m
+[96m3040 (4313b12ac674) - Sleep:3[0m
+[94m3040 (4313b12ac674) - PushMasterRequest:start[0m
+[96m3040 (4313b12ac674) - Sleep:1[0m
+[94m3040 (4313b12ac674) - PullMasterRequest:start (http://10.10.10.112:8000/clients/urls/pull)[0m
+[94m3040 (4313b12ac674) - FetchUrl:start (https://www.espacedoumandji.ca/blog)[0m
+
+2024-05-21 22:59:00,165 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 22:59:00,165 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 22:59:00,166 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 22:59:00,166 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 22:59:00,167 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 22:59:00,167 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 22:59:00,168 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 22:59:00,168 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 22:59:00,169 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 22:59:00,168 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:00,168 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:00,169 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:05,171 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 22:59:05,171 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 22:59:05,172 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 22:59:05,171 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 22:59:05,172 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 22:59:05,173 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 22:59:05,173 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:05,173 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:05,177 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:10,175 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 22:59:10,176 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 22:59:10,176 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 22:59:10,177 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 22:59:10,178 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 22:59:10,176 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:10,179 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 22:59:10,177 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:10,179 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 22:59:15,183 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 22:59:15,188 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 22:59:15,188 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:01:19,033 - googlebot-webtop - INFO - Output: [94m3060 (03317b02d500) - Killing process with PID: 5273[0m
+[92m3060 (03317b02d500) - All Tor processes have been killed.[0m
+[96m3060 (03317b02d500) - Sleep:3[0m
+[94m3060 (03317b02d500) - Tor:start[0m
+[96m3060 (03317b02d500) - Sleep:10[0m
+
+2024-05-21 23:01:19,038 - googlebot-webtop - INFO - Error: Traceback (most recent call last):
+  File "/app/run_results.py", line 91, in <module>
+    scraper.run()
+  File "/app/run_results.py", line 79, in run
+    self.tor_client = start_tor_client()
+                      ^^^^^^^^^^^^^^^^^^
+  File "/app/utils.py", line 98, in start_tor_client
+    tor_client.start_session()
+  File "/venv/lib/python3.11/site-packages/marionette_driver/decorators.py", line 34, in _
+    m._handle_socket_failure()
+  File "/venv/lib/python3.11/site-packages/marionette_driver/marionette.py", line 736, in _handle_socket_failure
+    reraise(exc_cls, exc, tb)
+  File "/venv/lib/python3.11/site-packages/six.py", line 719, in reraise
+    raise value
+  File "/venv/lib/python3.11/site-packages/marionette_driver/decorators.py", line 24, in _
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/marionette_driver/marionette.py", line 1281, in start_session
+    self.raise_for_port(timeout=timeout)
+  File "/venv/lib/python3.11/site-packages/marionette_driver/marionette.py", line 660, in raise_for_port
+    raise socket.timeout(
+TimeoutError: Timed out waiting for connection on 127.0.0.1:2828!
+
+2024-05-21 23:05:31,146 - googlebot-webtop - INFO - Output: [94m3050 (f4580fd485db) - Killing process with PID: 7088[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/results/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.google.ca/search?ie=UTF-8&oe=UTF-8&hl=fr&q=services+d%27elimination+des+dechets&adtest=off&ip=0.0.0.0&noj=1&nomo=1&tci=g%3A1002573%2Cp%3A30000&glp=1&uule=w+CAIQICIVTGFtYnRvbixRdWViZWMsQ2FuYWRh)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (No data received over socket)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 7918[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/results/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.google.ca/search?ie=UTF-8&oe=UTF-8&hl=fr&q=taxi+longue+distance&adtest=off&ip=0.0.0.0&noj=1&nomo=1&tci=g%3A1002698%2Cp%3A30000&glp=1&uule=w+CAIQICIaU2FpbnRlLUp1bGllLFF1ZWJlYyxDYW5hZGE%3D)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (No data received over socket)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 8727[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+[94m3050 (f4580fd485db) - PullMasterRequest:start (http://10.10.10.112:8000/clients/results/pull)[0m
+[94m3050 (f4580fd485db) - FetchUrl:start (https://www.google.ca/search?ie=UTF-8&oe=UTF-8&hl=fr&q=optimisation+des+moteurs+de+recherche&adtest=off&ip=0.0.0.0&noj=1&nomo=1&tci=g%3A1002713%2Cp%3A30000&glp=1&uule=w+CAIQICIdVmFsbGVlLUpvbmN0aW9uLFF1ZWJlYyxDYW5hZGE%3D)[0m
+[91m3050 (f4580fd485db) - FetchUrl:error (No data received over socket)[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - PushMasterRequest:start[0m
+[96m3050 (f4580fd485db) - Sleep:1[0m
+[94m3050 (f4580fd485db) - Tor:terminate[0m
+[94m3050 (f4580fd485db) - Tor:terminated[0m
+[96m3050 (f4580fd485db) - Sleep:5[0m
+[94m3050 (f4580fd485db) - Killing process with PID: 9781[0m
+[92m3050 (f4580fd485db) - All Tor processes have been killed.[0m
+[96m3050 (f4580fd485db) - Sleep:3[0m
+[94m3050 (f4580fd485db) - Tor:start[0m
+[96m3050 (f4580fd485db) - Sleep:10[0m
+
+2024-05-21 23:05:31,147 - googlebot-webtop - INFO - Error: Traceback (most recent call last):
+  File "/app/run_results.py", line 91, in <module>
+    scraper.run()
+  File "/app/run_results.py", line 79, in run
+    self.tor_client = start_tor_client()
+                      ^^^^^^^^^^^^^^^^^^
+  File "/app/utils.py", line 98, in start_tor_client
+    tor_client.start_session()
+  File "/venv/lib/python3.11/site-packages/marionette_driver/decorators.py", line 24, in _
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/marionette_driver/marionette.py", line 1287, in start_session
+    resp = self._send_message("WebDriver:NewSession", capabilities)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/marionette_driver/decorators.py", line 24, in _
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/lib/python3.11/site-packages/marionette_driver/marionette.py", line 692, in _send_message
+    self._handle_error(err)
+  File "/venv/lib/python3.11/site-packages/marionette_driver/marionette.py", line 704, in _handle_error
+    raise errors.lookup(error)(message, stacktrace=stacktrace)
+marionette_driver.errors.SessionNotCreatedException: Error: NS_ERROR_ABORT
+stacktrace:
+	#checkLoadingState@chrome://remote/content/shared/Navigate.sys.mjs:246:28
+	onStateChange@chrome://remote/content/shared/Navigate.sys.mjs:295:28
+
+
+2024-05-21 23:06:46,817 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:06:46,818 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:06:46,819 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:06:46,819 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:46,837 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:06:46,837 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:06:46,838 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:06:46,838 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:46,987 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:06:46,988 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:06:46,990 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:06:46,990 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:51,828 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:06:51,829 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:06:51,830 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:51,849 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:06:51,851 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:06:51,851 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:52,003 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:06:52,012 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:06:52,012 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:56,832 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:06:56,837 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:06:56,837 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:56,853 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:06:56,854 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:06:56,854 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:06:57,023 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:06:57,024 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:06:57,024 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:07:02,053 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:07:02,061 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:07:02,061 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:03,446 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:20:03,447 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:20:03,457 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:03,457 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:03,572 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:20:03,574 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:20:03,577 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:03,577 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:03,579 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:03,586 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:20:03,586 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:20:03,590 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:03,590 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:03,669 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:03,671 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:08,464 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:20:08,465 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:08,465 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:08,506 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:08,585 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:20:08,585 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:08,585 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:08,592 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:20:08,595 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:08,595 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:08,627 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:08,632 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:13,468 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:20:13,472 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:13,472 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:13,514 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:13,587 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:20:13,589 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:13,589 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:13,597 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:20:13,598 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:13,598 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:13,628 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:13,643 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:18,600 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:20:18,601 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:18,602 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:18,662 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:24,526 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:20:24,527 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:20:24,528 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:24,528 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:24,562 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:24,652 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:20:24,652 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:20:24,654 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:24,654 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:24,702 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:29,506 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:20:29,509 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:20:29,510 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:29,510 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:29,530 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:20:29,531 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:29,531 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:29,564 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:29,583 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:29,656 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:20:29,657 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:29,658 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:29,698 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:34,513 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:20:34,514 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:34,514 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:34,534 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:20:34,537 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:34,537 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:34,554 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:34,577 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:34,662 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:20:34,663 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:34,663 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:34,704 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:39,516 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:20:39,517 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:39,517 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:39,553 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:44,519 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:20:44,521 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:44,521 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:44,558 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:45,307 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:20:45,308 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:20:45,310 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:45,310 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:45,331 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:20:45,331 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:20:45,333 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:45,333 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:45,347 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:45,366 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:50,312 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:20:50,313 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:50,313 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:50,335 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:20:50,336 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:50,336 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:50,355 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:50,383 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:54,987 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:20:54,987 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:20:54,988 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:54,988 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:55,040 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:55,315 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:20:55,316 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:20:55,316 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:55,338 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:20:55,339 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:20:55,339 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:20:55,350 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:55,371 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:20:59,993 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:20:59,994 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:20:59,994 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:00,056 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:04,998 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:21:05,000 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:05,000 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:05,032 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:05,764 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:21:05,764 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:21:05,765 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:21:05,765 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:21:05,766 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:05,766 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:05,766 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:05,766 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:05,802 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:05,806 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:10,002 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:21:10,003 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:10,003 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:10,064 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:10,769 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:21:10,770 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:21:10,770 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:10,771 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:10,770 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:10,771 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:10,815 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:10,816 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:15,773 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:21:15,774 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:21:15,774 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:15,774 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:15,776 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:15,777 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:15,819 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:15,825 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:20,681 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:21:20,682 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:21:20,683 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:20,684 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:20,741 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:25,686 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:21:25,687 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:25,687 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:25,721 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:27,070 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:21:27,070 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:21:27,071 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:27,072 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:27,108 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:27,168 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:21:27,169 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:21:27,170 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:27,170 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:27,206 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:30,689 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:21:30,690 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:30,690 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:30,724 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:32,074 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:21:32,075 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:32,075 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:32,109 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:32,173 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:21:32,174 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:32,174 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:32,207 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:35,692 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:21:35,696 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:35,696 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:35,731 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:37,077 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:21:37,079 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:37,079 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:37,152 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:37,176 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:21:37,177 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:37,177 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:37,220 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:46,080 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:21:46,081 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:21:46,082 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:46,082 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:46,118 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:47,531 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:21:47,532 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:21:47,533 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:47,533 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:47,568 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:47,647 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:21:47,647 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:21:47,649 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:47,649 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:47,684 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:51,084 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:21:51,087 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:51,087 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:51,136 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:52,535 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:21:52,536 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:52,536 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:52,584 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:52,651 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:21:52,652 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:52,652 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:52,688 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:56,089 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:21:56,090 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:21:56,090 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:56,131 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:57,541 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:21:57,541 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:21:57,542 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:57,572 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:21:57,654 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:21:57,655 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:21:57,656 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:21:57,693 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:01,094 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:22:01,095 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:01,095 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:01,140 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:07,947 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:22:07,947 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:22:07,948 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:07,948 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:07,979 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:08,060 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:22:08,061 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:22:08,061 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:08,062 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:08,103 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:11,499 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:22:11,499 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:22:11,501 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:11,501 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:11,534 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:12,949 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:22:12,950 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:12,951 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:12,985 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:13,063 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:22:13,065 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:13,065 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:13,101 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:16,503 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:22:16,505 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:16,505 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:16,537 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:17,953 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:22:17,954 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:17,955 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:17,989 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:18,066 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:22:18,067 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:18,068 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:18,098 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:21,506 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:22:21,507 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:21,508 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:21,546 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:26,510 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:22:26,511 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:26,512 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:26,546 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:28,364 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:22:28,365 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:22:28,366 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:28,366 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:28,402 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:28,459 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:22:28,459 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:22:28,460 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:28,460 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:28,492 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:33,368 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:22:33,369 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:33,370 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:33,405 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:33,463 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:22:33,464 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:33,464 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:33,503 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:36,878 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:22:36,879 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:22:36,880 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:36,880 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:36,919 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:38,372 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:22:38,373 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:38,373 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:38,408 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:38,466 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:22:38,467 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:38,467 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:38,503 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:41,882 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:22:41,883 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:41,883 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:41,922 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:46,888 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:22:46,889 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:46,890 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:46,928 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:48,792 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:22:48,793 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:22:48,794 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:48,794 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:48,829 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:48,892 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:22:48,893 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:22:48,894 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:48,894 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:48,929 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:51,891 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:22:51,892 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:22:51,892 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:51,927 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:53,796 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:22:53,797 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:53,798 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:53,828 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:53,896 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:22:53,897 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:53,897 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:53,929 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:58,800 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:22:58,801 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:22:58,801 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:58,838 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:22:58,899 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:22:58,900 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:22:58,901 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:22:58,939 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:02,285 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:23:02,287 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:23:02,289 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:02,290 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:02,411 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:07,296 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:23:07,297 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:07,298 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:07,331 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:09,223 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:23:09,223 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:23:09,224 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:09,224 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:09,257 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:09,312 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:23:09,312 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:23:09,314 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:09,314 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:09,347 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:12,300 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:23:12,301 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:12,301 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:12,336 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:14,225 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:23:14,226 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:14,226 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:14,255 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:14,315 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:23:14,316 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:14,316 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:14,356 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:17,303 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:23:17,305 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:17,305 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:17,338 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:19,228 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:23:19,229 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:19,229 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:19,261 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:19,318 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:23:19,319 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:19,319 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:19,352 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:27,683 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:23:27,684 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:23:27,685 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:27,685 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:27,718 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:29,685 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:23:29,685 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:23:29,686 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:29,686 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:29,719 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:29,882 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:23:29,883 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:23:29,884 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:29,885 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:29,921 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:32,689 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:23:32,690 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:32,690 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:32,761 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:34,689 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:23:34,690 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:34,690 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:34,724 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:34,887 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:23:34,888 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:34,888 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:34,919 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:37,692 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:23:37,693 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:37,693 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:37,724 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:39,692 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:23:39,693 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:39,693 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:39,722 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:39,889 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:23:39,890 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:39,890 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:39,942 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:42,695 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:23:42,696 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:42,697 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:42,734 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:50,131 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:23:50,132 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:23:50,133 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:50,133 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:50,167 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:50,309 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:23:50,310 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:23:50,310 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:50,311 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:50,341 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:53,085 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:23:53,086 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:23:53,087 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:53,087 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:53,120 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:55,136 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:23:55,137 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:23:55,138 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:55,195 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:55,312 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:23:55,313 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:23:55,313 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:55,346 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:23:58,089 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:23:58,090 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:23:58,090 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:23:58,123 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:00,141 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:24:00,141 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:24:00,141 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:00,173 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:00,316 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:24:00,319 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:24:00,319 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:00,354 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:03,093 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:24:03,094 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:24:03,094 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:03,127 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:08,096 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:24:08,098 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:24:08,098 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:08,134 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:10,580 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:24:10,581 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:24:10,582 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:24:10,582 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:10,617 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:10,847 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:24:10,848 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:24:10,849 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:24:10,849 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:10,922 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:15,584 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:24:15,586 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:24:15,586 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:15,617 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:15,850 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:24:15,851 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:24:15,851 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:15,887 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:18,483 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:24:18,483 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:24:18,484 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:24:18,485 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:18,595 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:20,588 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:24:20,589 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:24:20,589 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:20,619 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:20,853 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:24:20,854 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:24:20,854 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:20,886 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:23,487 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:24:23,488 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:24:23,488 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:23,521 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:28,490 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:24:28,491 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:24:28,491 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:28,534 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:24:33,492 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:24:33,494 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:24:33,494 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:24:33,548 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:25:56,486 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:25:56,487 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:25:56,488 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:25:56,488 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:25:56,539 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:25:56,784 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:25:56,786 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:25:56,787 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:25:56,788 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:25:56,811 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:25:56,812 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:25:56,812 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:25:56,813 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:25:56,850 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:25:56,976 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:01,488 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:26:01,490 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:26:01,490 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:01,536 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:01,789 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:26:01,790 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:26:01,790 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:01,817 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:26:01,819 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:26:01,819 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:01,829 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:01,853 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:06,491 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:26:06,495 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:26:06,495 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:06,524 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:06,792 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:26:06,793 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:26:06,794 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:06,821 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:26:06,823 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:26:06,823 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:06,827 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:06,854 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:26:11,824 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:26:11,826 - googlebot-webtop - INFO - Executing: docker exec -u -it abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:26:11,827 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:26:11,860 - googlebot-webtop - INFO - Error: Error: No such container: abc
+
+2024-05-21 23:29:33,007 - googlebot-webtop - INFO - Exec Domains Queries...
+2024-05-21 23:29:33,008 - googlebot-webtop - INFO - Starting app 8/10...
+2024-05-21 23:29:33,009 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client8-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:29:33,009 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:33,011 - googlebot-webtop - INFO - Exec Urls...
+2024-05-21 23:29:33,012 - googlebot-webtop - INFO - Starting app 1/4...
+2024-05-21 23:29:33,013 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client1-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:29:33,013 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:33,014 - googlebot-webtop - INFO - Exec Results...
+2024-05-21 23:29:33,015 - googlebot-webtop - INFO - Starting app 5/7...
+2024-05-21 23:29:33,015 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client5-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:29:33,015 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:38,011 - googlebot-webtop - INFO - Starting app 9/10...
+2024-05-21 23:29:38,013 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client9-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:29:38,013 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:38,014 - googlebot-webtop - INFO - Starting app 2/4...
+2024-05-21 23:29:38,017 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client2-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:29:38,017 - googlebot-webtop - INFO - Starting app 6/7...
+2024-05-21 23:29:38,017 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:38,022 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client6-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:29:38,022 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:43,015 - googlebot-webtop - INFO - Starting app 10/10...
+2024-05-21 23:29:43,016 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client10-1 bash -c cd /app && /venv/bin/python3.11 run_domainsqueries.py
+2024-05-21 23:29:43,016 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:43,022 - googlebot-webtop - INFO - Starting app 3/4...
+2024-05-21 23:29:43,025 - googlebot-webtop - INFO - Starting app 7/7...
+2024-05-21 23:29:43,026 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client3-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:29:43,027 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client7-1 bash -c cd /app && /venv/bin/python3.11 run_results.py
+2024-05-21 23:29:43,027 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:43,026 - googlebot-webtop - INFO - Sleeping 5...
+2024-05-21 23:29:48,031 - googlebot-webtop - INFO - Starting app 4/4...
+2024-05-21 23:29:48,034 - googlebot-webtop - INFO - Executing: docker exec -u abc googlebot-webtop-client4-1 bash -c cd /app && /venv/bin/python3.11 run_urls.py
+2024-05-21 23:29:48,034 - googlebot-webtop - INFO - Sleeping 5...

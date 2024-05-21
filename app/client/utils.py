@@ -6,6 +6,7 @@ import json
 import requests
 import gzip
 import socket
+import sys
 import subprocess
 import os
 
@@ -124,7 +125,12 @@ def log(content, color='blue'):
     hostname = hostname if hostname else 'unknown'
     port = os.getenv('CLIENT_PORT')
 
-    print(f'{color_code}{port} ({hostname}) - {content}{end_code}')
+    out = f'{color_code}{port} ({hostname}) - {content}{end_code}'
+    sys.stdout.write(out)
+    print(out)
+
+    with open(f'/logs/client_{port}.log', 'a') as f:
+        f.write(out + '\n')
 
 
 def pull_master_request(pull_url):

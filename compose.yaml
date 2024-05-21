@@ -1,11 +1,64 @@
 services:
+  agent_1:
+    image: python:latest
+    build:
+      context: app/agent
+      dockerfile: Dockerfile
+    environment:
+      - AGENT_ID=1
+    volumes:
+      - ./app/agent:/app
+      - ./logs:/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    command: sh -c "sleep 5 && python3 /app/run.py --execurls --fromindex 1 --toindex 4"
+    depends_on:
+      - client1
+      - client2
+      - client3
+      - client4
+  agent_2:
+    image: python:latest
+    environment:
+      - AGENT_ID=2
+    build:
+      context: app/agent
+      dockerfile: Dockerfile
+    volumes:
+      - ./app/agent:/app
+      - ./logs:/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    command: sh -c "sleep 5 && python3 /app/run.py --execresults --fromindex 5 --toindex 7"
+    depends_on:
+      - client5
+      - client6
+      - client7
+  agent_3:
+    image: python:latest
+    environment:
+      - AGENT_ID=3
+    build:
+      context: app/agent
+      dockerfile: Dockerfile
+    volumes:
+      - ./app/agent:/app
+      - ./logs:/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    command: sh -c "sleep 5 && python3 /app/run.py --execdomainsqueries --fromindex 8 --toindex 10"
+    depends_on:
+      - client8
+      - client9
+      - client10
   client1:
     image: googlebot-client:1.0.0
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3010
       - PUID=5001
@@ -25,7 +78,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3020
       - PORT=3020
@@ -46,7 +100,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3030
       - PUID=5001
@@ -66,7 +121,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3040
       - PUID=5001
@@ -86,7 +142,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3050
       - PUID=5001
@@ -106,7 +163,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3060
       - PUID=5001
@@ -126,7 +184,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3070
       - PUID=5001
@@ -146,7 +205,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3080
       - PUID=5001
@@ -166,7 +226,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3090
       - PUID=5001
@@ -186,7 +247,8 @@ services:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
-      - ./app:/app
+      - ./app/client:/app
+      - ./logs:/logs
     environment:
       - CLIENT_PORT=3100
       - PUID=5001
@@ -206,7 +268,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3110
   #     - PUID=5001
@@ -226,7 +288,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3120
   #     - PORT=3020
@@ -247,7 +309,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3130
   #     - PUID=5001
@@ -267,7 +329,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3140
   #     - PUID=5001
@@ -287,7 +349,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3150
   #     - PUID=5001
@@ -307,7 +369,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3160
   #     - PUID=5001
@@ -327,7 +389,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3170
   #     - PUID=5001
@@ -347,7 +409,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3180
   #     - PUID=5001
@@ -367,7 +429,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3190
   #     - PUID=5001
@@ -387,7 +449,7 @@ services:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
   #   volumes:
-  #     - ./app:/app
+  #     - ./app/client:/app
   #   environment:
   #     - CLIENT_PORT=3200
   #     - PUID=5001
