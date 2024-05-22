@@ -73,4 +73,3 @@ if __name__ == '__main__':
         runner.log('No Action Specified. Exiting...')
 
     runner.log('Script Finished')
-    runner.sleep(3600)

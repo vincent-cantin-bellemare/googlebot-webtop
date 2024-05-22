@@ -14,3 +14,9 @@ sudo docker build -t googlebot-client:1.0.1 .
 cd ../..
 docker compose up -d
 ```
+
+# Crontab
+
+```sh
+0 * * * * cd /home/vcantin/docker/googlebot-webtop && docker compose down && docker compose up -d
+```

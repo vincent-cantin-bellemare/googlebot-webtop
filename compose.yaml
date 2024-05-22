@@ -16,7 +16,7 @@ services:
       - ./logs:/logs
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
-    command: sh -c "sleep 5 && python3 /app/run.py --execresults --fromindex 1 --toindex 5"
+    command: sh -c "sleep 5 && python3 /app/run.py --execresults --fromindex 1 --toindex 5 && sleep infinity"
     depends_on:
       - redis
       - client1
@@ -36,7 +36,7 @@ services:
       - ./logs:/logs
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
-    command: sh -c "sleep 5 && python3 /app/run.py --execurls --fromindex 6 --toindex 8"
+    command: sh -c "sleep 5 && python3 /app/run.py --execurls --fromindex 6 --toindex 8 && sleep infinity"
     depends_on:
       - redis
       - client6
@@ -54,7 +54,7 @@ services:
       - ./logs:/logs
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
-    command: sh -c "sleep 5 && python3 /app/run.py --execdomainsqueries --fromindex 9 --toindex 10"
+    command: sh -c "sleep 5 && python3 /app/run.py --execdomainsqueries --fromindex 9 --toindex 10  && sleep infinity"
     depends_on:
       - redis
       - client9
