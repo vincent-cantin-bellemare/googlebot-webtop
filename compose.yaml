@@ -60,13 +60,14 @@ services:
       - client9
       - client10
   client1:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_1/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3010
       - PUID=5001
@@ -81,13 +82,14 @@ services:
     restart: unless-stopped
 
   client2:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_2/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3020
       - PORT=3020
@@ -103,13 +105,14 @@ services:
     restart: unless-stopped
 
   client3:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_3/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3030
       - PUID=5001
@@ -124,13 +127,14 @@ services:
     restart: unless-stopped
 
   client4:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_4/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3040
       - PUID=5001
@@ -145,13 +149,14 @@ services:
     restart: unless-stopped
 
   client5:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_5/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3050
       - PUID=5001
@@ -166,13 +171,14 @@ services:
     restart: unless-stopped
 
   client6:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_6/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3060
       - PUID=5001
@@ -187,13 +193,14 @@ services:
     restart: unless-stopped
 
   client7:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_7/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3070
       - PUID=5001
@@ -208,13 +215,14 @@ services:
     restart: unless-stopped
 
   client8:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_8/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3080
       - PUID=5001
@@ -229,13 +237,14 @@ services:
     restart: unless-stopped
 
   client9:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_9/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3090
       - PUID=5001
@@ -250,13 +259,14 @@ services:
     restart: unless-stopped
 
   client10:
-    image: googlebot-client:1.0.1
+    image: googlebot-client:1.0.3
     security_opt:
       - seccomp:unconfined #optional
     entrypoint: [/init]
     volumes:
       - ./services/client/app:/app:r
       - ./logs:/logs
+      - ./services/client/volumes/client_10/.cache:/config/.cache
     environment:
       - CLIENT_PORT=3100
       - PUID=5001
@@ -271,7 +281,7 @@ services:
     restart: unless-stopped
 
   # client11:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -291,7 +301,7 @@ services:
   #   restart: unless-stopped
 
   # client12:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -312,7 +322,7 @@ services:
   #   restart: unless-stopped
 
   # client13:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -332,7 +342,7 @@ services:
   #   restart: unless-stopped
 
   # client14:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -352,7 +362,7 @@ services:
   #   restart: unless-stopped
 
   # client15:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -372,7 +382,7 @@ services:
   #   restart: unless-stopped
 
   # client16:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -392,7 +402,7 @@ services:
   #   restart: unless-stopped
 
   # client17:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -412,7 +422,7 @@ services:
   #   restart: unless-stopped
 
   # client18:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -432,7 +442,7 @@ services:
   #   restart: unless-stopped
 
   # client19:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]
@@ -452,7 +462,7 @@ services:
   #   restart: unless-stopped
 
   # client20:
-  #   image: googlebot-client:1.0.1
+  #   image: googlebot-client:1.0.3
   #   security_opt:
   #     - seccomp:unconfined #optional
   #   entrypoint: [/init]

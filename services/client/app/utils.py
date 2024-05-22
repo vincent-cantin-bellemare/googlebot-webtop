@@ -34,6 +34,16 @@ def kill_tor_processes():
 
     log("All Tor processes have been killed.", color='green')
 
+def kill_firefox_processes():
+    ps_output = subprocess.check_output(["ps", "aux"]).decode('utf-8')
+    for line in ps_output.split("\n"):
+        if "marionette" in line:
+            pid = int(line.split()[1])
+            log(f"Killing process with PID: {pid}")
+            subprocess.run(["kill", '-9', str(pid)])
+
+    log("All Tor processes have been killed.", color='green')
+
 
 def fetch_url(tor_client, url, fetch_max_increment=1):
     fetch_from_datetime = datetime.datetime.now()
@@ -94,17 +104,32 @@ def start_tor_process():
     log('Tor:start', 'blue')
     return subprocess.Popen('start-tor-browser', shell=True)
 
+def start_firefox_process():
+    log('Firefox:start', 'blue')
+    return subprocess.Popen('start-firefox', shell=True)
+
 
 def start_tor_client():
     tor_client = marionette.Marionette(host='localhost', port=2828, socket_timeout=60)
     tor_client.start_session()
     return tor_client
 
+def start_firefox_client():
+    firefox_client = marionette.Marionette(host='localhost', port=2828, socket_timeout=60)
+    firefox_client.start_session()
+    return firefox_client
+
 
 def terminate_tor_process(tor_process):
     log('Tor:terminate', 'blue')
     tor_process.terminate()
     log('Tor:terminated', 'blue')
+
+
+def terminate_firefox_process(firefox_process):
+    log('Firefox:terminate', 'blue')
+    firefox_process.terminate()
+    log('Firefox:terminated', 'blue')
 
 
 def log(content, color='blue'):

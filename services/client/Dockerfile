@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get install -y python3.11 python3.11-venv python3.11-distutils python3.11-dev \
+    && apt-get install -y firefox \
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -22,6 +23,14 @@ RUN mkdir -p /opt/tor-browser && \
     chown -R 5001:5001 /opt/tor-browser
 
 COPY user.js /opt/tor-browser/Browser/TorBrowser/Data/Browser/profile.default/user.js
+
+
+RUN echo 'firefox --marionette' > /usr/local/bin/start-firefox && \
+    chmod +x /usr/local/bin/start-firefox
+
+# RUN wget -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux-aarch64.tar.gz && \
+#     tar -xzf /tmp/geckodriver.tar.gz -C /usr/local/bin && \
+#     rm /tmp/geckodriver.tar.gz
 
 COPY requirements.txt /tmp/requirements.txt
 RUN python3.11 -m venv /venv

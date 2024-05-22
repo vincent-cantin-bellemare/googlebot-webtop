@@ -6,25 +6,25 @@ from utils import (
     get_hostname,
     pull_master_request,
     push_master_request,
-    kill_tor_processes,
-    start_tor_process,
-    terminate_tor_process,
-    start_tor_client,
+    kill_firefox_processes,
+    start_firefox_process,
+    terminate_firefox_process,
+    start_firefox_client,
     fetch_url,
     log,
     sleep
 )
 
 '''
-Script to scrape URLS results using Tor and Marionette
+Script to scrape URLS results using firefox and Marionette
 '''
 
 class WebScraper:
     VERSION = '2.0.5'
 
     def __init__(self):
-        self.tor_process = None
-        self.tor_client = None
+        self.firefox_process = None
+        self.firefox_client = None
         self.__init_sentry()
 
     def __init_sentry(self):
@@ -42,7 +42,7 @@ class WebScraper:
             return True # Normal return
 
         if request_dict['url']:
-            fetch_data = fetch_url(self.tor_client, request_dict['url'], 3)
+            fetch_data = fetch_url(self.firefox_client, request_dict['url'], 3)
 
             data = {
                 'client_version': self.VERSION,
@@ -75,12 +75,12 @@ class WebScraper:
         self.total_unsuccessful_requests = 0
 
         while True:
-            if self.tor_process is None:
-                kill_tor_processes()
+            if self.firefox_process is None:
+                kill_firefox_processes()
                 sleep(3)
-                self.tor_process = start_tor_process()
+                self.firefox_process = start_firefox_process()
                 sleep(10)
-                self.tor_client = start_tor_client()
+                self.firefox_client = start_firefox_client()
 
             process_status = self.process_url()
             sleep(1)
@@ -91,8 +91,8 @@ class WebScraper:
                 self.total_unsuccessful_requests += 1
 
             if self.total_unsuccessful_requests >= 5:
-                terminate_tor_process(self.tor_process)
-                self.tor_process = None
+                terminate_firefox_process(self.firefox_process)
+                self.firefox_process = None
                 sleep(5)
 
 if __name__ == '__main__':
