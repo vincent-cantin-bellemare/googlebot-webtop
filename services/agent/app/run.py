@@ -2,34 +2,24 @@ import threading
 import argparse
 import time
 import subprocess
-import logging
 import os
+import redis
 
 
 class Runner:
     PROJECT_NAME = "googlebot-webtop"
 
-    def __init__(self):
-        self.setup_logging()
-
-    def setup_logging(self):
-        logging.basicConfig(level=logging.INFO,
-                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                            handlers=[
-                                logging.FileHandler(f"/logs/agent_{os.environ['AGENT_ID']}.log"),
-                                logging.StreamHandler()
-                            ])
-        self.logger = logging.getLogger(self.PROJECT_NAME)
-
     def log(self, message):
         """ Logs a message """
-        self.logger.info(message)
+        print(message)
+        redis_client = redis.Redis(host='redis', port=6379, db=0)
+        redis_client.rpush(f'agent:agent_{os.environ['AGENT_ID']}', message)
 
     def sleep(self, seconds):
         self.log(f'Sleeping {seconds}...')
         time.sleep(seconds)
 
-    def run_docker_app_abc(self, number, commands):
+    def docker_exec(self, number, commands):
         exec_commands = [
             'docker',
             'exec',
@@ -60,7 +50,7 @@ if __name__ == '__main__':
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_results.py"]))
+            thread = threading.Thread(target=runner.docker_exec, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_results.py"]))
             thread.start()
             runner.sleep(5)
     elif args.execurls:
@@ -68,7 +58,7 @@ if __name__ == '__main__':
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_urls.py"]))
+            thread = threading.Thread(target=runner.docker_exec, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_urls.py"]))
             thread.start()
             runner.sleep(5)
     elif args.execdomainsqueries:
@@ -76,7 +66,7 @@ if __name__ == '__main__':
 
         for client_id in range(args.fromindex, args.toindex + 1):
             runner.log(f'Starting app {client_id}/{args.toindex}...')
-            thread = threading.Thread(target=runner.run_docker_app_abc, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_domainsqueries.py"]))
+            thread = threading.Thread(target=runner.docker_exec, args=(client_id, ['bash', '-c', "cd /app && /venv/bin/python3.11 run_domainsqueries.py"]))
             thread.start()
             runner.sleep(5)
     else:

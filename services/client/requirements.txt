@@ -2,3 +2,4 @@ requests
 marionette_driver
 Pillow
 sentry-sdk
+redis

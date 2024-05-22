@@ -23,6 +23,7 @@ RUN mkdir -p /opt/tor-browser && \
 
 COPY user.js /opt/tor-browser/Browser/TorBrowser/Data/Browser/profile.default/user.js
 
-COPY app/requirements.txt /app/requirements.txt
+COPY requirements.txt /tmp/requirements.txt
 RUN python3.11 -m venv /venv
-RUN /venv/bin/pip install -r /app/requirements.txt
+RUN /venv/bin/pip install -r /tmp/requirements.txt
+RUN rm /tmp/requirements.txt
