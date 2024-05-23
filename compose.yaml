@@ -1,8 +1,13 @@
 services:
   redis:
-    image: redis:latest
+    image: redis/redis-stack-server:latest
+    restart: unless-stopped
     ports:
-      - 6379:6379
+      - 6379:6379/tcp
+    volumes:
+      - ./services/redis/data:/data:rw
+    environment:
+      REDIS_ARGS: "--appendonly yes"
 
   agent_1:
     image: python:latest

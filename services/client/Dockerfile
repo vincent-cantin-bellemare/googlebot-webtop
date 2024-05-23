@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     && add-apt-repository ppa:deadsnakes/ppa \
     && apt-get install -y python3.11 python3.11-venv python3.11-distutils python3.11-dev \
     && apt-get install -y firefox \
+    && apt-get install -y nano \
     && rm -rf /var/lib/apt/lists/*
 
 

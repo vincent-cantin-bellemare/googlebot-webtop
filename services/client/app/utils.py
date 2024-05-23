@@ -7,7 +7,6 @@ import requests
 import gzip
 import socket
 import redis
-import sys
 import subprocess
 import os
 
@@ -152,7 +151,7 @@ def log(content, color='blue'):
     port = os.getenv('CLIENT_PORT')
 
     out = f'{color_code}{port} ({hostname}) - {content}{end_code}'
-    sys.stdout.write(out)
+    print(out)
 
     redis_client = redis.Redis(host='redis', port=6379, db=0)
     redis_client.rpush(f'client:client_{port}', content)
