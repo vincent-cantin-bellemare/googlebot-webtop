@@ -96,8 +96,10 @@ class WebScraper:
                 sleep(5)
 
 if __name__ == '__main__':
-    try:
-        scraper = WebScraper()
-        scraper.run()
-    except Exception as e:
-        log(f'Global Error: {e}', 'red')
+    while True:
+        try:
+            scraper = WebScraper()
+            scraper.run()
+        except Exception as e:
+            log(f'Global Error: {e}', 'red')
+            sleep(30)
