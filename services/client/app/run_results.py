@@ -40,7 +40,8 @@ class WebScraper:
             request_dict = pull_master_request(f'{MASTER_URL}/clients/results/pull')
         except Exception as e:
             log(f'PullMasterRequest:error ({e})', 'red')
-            return True # Normal return
+            sleep(5)
+            return True # Normal return, will attempt later
 
         fetch_data = fetch_url(self.tor_client, request_dict['url'], 3)
 
@@ -67,10 +68,15 @@ class WebScraper:
             log(f'PushMasterRequest:error ({e})', 'red')
             sleep(5)
 
+        log(f'PushMasterRequest:error ({e})', 'red')
         return fetch_data['status']
 
     def run(self):
+        log('Starting Script', 'white')
+
         while True:
+            log('Enter into infinite loop', 'white')
+
             if self.tor_process is None:
                 kill_tor_processes()
                 sleep(3)
@@ -82,6 +88,7 @@ class WebScraper:
             sleep(1)
 
             if not process_status:
+                log('Process status is False', 'red')
                 terminate_tor_process(self.tor_process)
                 self.tor_process = None
                 sleep(5)

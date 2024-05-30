@@ -8,3 +8,4 @@ __pycache__
 venv/
 tor/
 services/client/volumes/
+services/redis/

@@ -44,53 +44,44 @@ def kill_firefox_processes():
     log("All Tor processes have been killed.", color='green')
 
 
-def fetch_url(tor_client, url, fetch_max_increment=1):
+def fetch_url(tor_client, url):
     fetch_from_datetime = datetime.datetime.now()
-    fetch_increment = 0
     status_ok = None
     html = None
     screenshot_b64 = ''
     content_gzip_b64 = ''
 
-    while True:
-        fetch_increment += 1
+    log(f'FetchUrl:start ({url})', 'blue')
 
-        log(f'FetchUrl:start ({url})', 'blue')
+    try:
+        tor_client.navigate(url)
+    except Exception as e:
+        log(f'FetchUrl:error ({e})', 'red')
+        sleep(3)
+        status_ok = False
+    else:
+        log(f'FetchUrl:success ({url})', 'green')
 
-        try:
-            tor_client.navigate(url)
-        except Exception as e:
-            log(f'FetchUrl:error ({e})', 'red')
-            sleep(3)
-            status_ok = False
-            break
-        else:
-            log(f'FetchUrl:success ({url})', 'green')
+        html = tor_client.page_source
+        status_ok = \
+            html.find('Nos systèmes ont détecté un') == -1 and \
+            html.find('Ce réseau est bloqué') == -1 and \
+            html.find('Before you continue to Google') == -1 and \
+            html.find('Voordat je verdagaat') == -1 and \
+            html.find('Bevor Sie zu Google') == -1 and \
+            html.find('https://consent.google.com/ml?continue') == -1
 
-            html = tor_client.page_source
-            status_ok = \
-                html.find('Nos systèmes ont détecté un') == -1 and \
-                html.find('Ce réseau est bloqué') == -1 and \
-                html.find('Before you continue to Google') == -1 and \
-                html.find('Voordat je verdagaat') == -1 and \
-                html.find('Bevor Sie zu Google') == -1 and \
-                html.find('https://consent.google.com/ml?continue') == -1
+        screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
+        content_b64 = get_response_content_base64(tor_client)
+        content_gzip_b64 = get_response_content_gzip_base64(tor_client)
 
-            screenshot_b64 = compress_and_convert_screenshot_to_base64(tor_client)
-            content_b64 = get_response_content_base64(tor_client)
-            content_gzip_b64 = get_response_content_gzip_base64(tor_client)
-
-            log('FetchUrl:content_len (%d/%d)' % (len(content_b64), len(content_gzip_b64)))
-
-            if status_ok or fetch_increment >= fetch_max_increment:
-                time.sleep(1)
-                break
+        log('FetchUrl:content_len (%d/%d)' % (len(content_b64), len(content_gzip_b64)))
 
     fetch_to_datetime = datetime.datetime.now()
     fetch_duration = fetch_to_datetime - fetch_from_datetime
 
     return {
-        'increment': fetch_increment,
+        'increment': 1,
         'duration': int(round(fetch_duration.total_seconds(), 0)),
         'status': status_ok,
         'html': html,
@@ -160,6 +151,7 @@ def log(content, color='blue'):
 def pull_master_request(pull_url):
     log(f'PullMasterRequest:start ({pull_url})', 'blue')
     response = requests.get(pull_url, timeout=10)
+    log(f'PullMasterRequest:end ({pull_url})', 'blue')
     return response.json()
 
 
@@ -171,6 +163,7 @@ def push_master_request(push_url, data):
     }
 
     response = requests.post(push_url, data=json.dumps(data), headers=headers, timeout=10)
+    log('PushMasterRequest:end', 'blue')
     return response.json()
 
 
@@ -181,7 +174,7 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
         try:
             image = Image.open(io.BytesIO(screenshot_binary))
         except Exception as e:
-            log(f'CompressAndConvertScreenshotToBase64:error ({e})', 'red')
+            log(f'CompressAndConvertScreenshotToBase64:error_1 ({e})', 'red')
             return ''
 
         if image.mode == 'RGBA':
@@ -194,6 +187,7 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
         try:
             parameter = Image.ANTIALIAS
         except :
+            log(f'CompressAndConvertScreenshotToBase64:error_2 ({e})', 'red')
             parameter = Image.Resampling.LANCZOS
 
         image = image.resize((max_width, new_height), parameter)
