@@ -174,7 +174,7 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
         try:
             image = Image.open(io.BytesIO(screenshot_binary))
         except Exception as e:
-            log(f'CompressAndConvertScreenshotToBase64:error_1 ({e})', 'red')
+            log(f'CompressAndConvertScreenshotToBase64:error ({e})', 'red')
             return ''
 
         if image.mode == 'RGBA':
