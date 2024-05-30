@@ -42,7 +42,7 @@ class WebScraper:
             return True # Normal return
 
         if request_dict['url']:
-            fetch_data = fetch_url(self.firefox_client, request_dict['url'], 3)
+            fetch_data = fetch_url(self.firefox_client, request_dict['url'])
 
             data = {
                 'client_version': self.VERSION,

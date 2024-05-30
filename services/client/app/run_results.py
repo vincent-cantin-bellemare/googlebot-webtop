@@ -43,7 +43,7 @@ class WebScraper:
             sleep(5)
             return True # Normal return, will attempt later
 
-        fetch_data = fetch_url(self.tor_client, request_dict['url'], 3)
+        fetch_data = fetch_url(self.tor_client, request_dict['url'])
 
         data = {
             'client_version': self.VERSION,
