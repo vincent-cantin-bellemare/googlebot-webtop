@@ -186,7 +186,7 @@ def compress_and_convert_screenshot_to_base64(tor_client, compress=True):
 
         try:
             parameter = Image.ANTIALIAS
-        except Exception as e:
+        except Exception:
             parameter = Image.Resampling.LANCZOS
 
         image = image.resize((max_width, new_height), parameter)
