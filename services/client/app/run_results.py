@@ -40,7 +40,7 @@ class WebScraper:
             request_dict = pull_master_request(f'{MASTER_URL}/clients/results/pull')
         except Exception as e:
             log(f'PullMasterRequest:error ({e})', 'red')
-            sleep(5)
+            sleep(3.8)
             return True # Normal return, will attempt later
 
         fetch_data = fetch_url(self.tor_client, request_dict['url'])
@@ -66,7 +66,7 @@ class WebScraper:
             push_master_request(f'{MASTER_URL}/clients/results/push', data)
         except Exception as e:
             log(f'PushMasterRequest:error ({e})', 'red')
-            sleep(5)
+            sleep(5.5)
 
         log(f'PushMasterRequest:error ({e})', 'red')
         return fetch_data['status']
@@ -79,19 +79,19 @@ class WebScraper:
 
             if self.tor_process is None:
                 kill_tor_processes()
-                sleep(3)
+                sleep(3.2)
                 self.tor_process = start_tor_process()
-                sleep(10)
+                sleep(11.2)
                 self.tor_client = start_tor_client()
 
             process_status = self.process_url()
-            sleep(1)
+            sleep(1.1)
 
             if not process_status:
                 log('Process status is False', 'red')
                 terminate_tor_process(self.tor_process)
                 self.tor_process = None
-                sleep(5)
+                sleep(5.6)
 
 if __name__ == '__main__':
     while True:
@@ -100,4 +100,4 @@ if __name__ == '__main__':
             scraper.run()
         except Exception as e:
             log(f'Global Error: {e}', 'red')
-            sleep(30)
+            sleep(30.1)
