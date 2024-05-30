@@ -3,5 +3,5 @@ rm -rf services/redis/data/
 git checkout .
 git pull
 docker compose down
-docker compose up -f compose.yaml -d
+docker compose up -d
 echo "Script stated successfully!"
