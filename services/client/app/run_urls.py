@@ -77,13 +77,13 @@ class WebScraper:
         while True:
             if self.firefox_process is None:
                 kill_firefox_processes()
-                sleep(3)
+                sleep(3.3)
                 self.firefox_process = start_firefox_process()
-                sleep(10)
+                sleep(10.9)
                 self.firefox_client = start_firefox_client()
 
             process_status = self.process_url()
-            sleep(1)
+            sleep(1.5)
 
             if process_status:
                 self.total_unsuccessful_requests = 0

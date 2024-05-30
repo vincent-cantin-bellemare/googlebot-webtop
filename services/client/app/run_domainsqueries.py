@@ -77,13 +77,13 @@ class WebScraper:
         while True:
             if self.tor_process is None:
                 kill_tor_processes()
-                sleep(3)
+                sleep(3.2)
                 self.tor_process = start_tor_process()
-                sleep(10)
+                sleep(10.5)
                 self.tor_client = start_tor_client()
 
             process_status = self.process_url()
-            sleep(1)
+            sleep(1.3)
 
             if process_status:
                 self.total_unsuccessful_requests = 0
