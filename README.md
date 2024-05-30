@@ -26,8 +26,14 @@ sudo chown $USER:$USER . -R
 sudo chmod 777 services/client/volumes -R
 ```
 
-# Crontab
+## Crontab
 
 ```sh
 0 * * * * cd /home/vcantin/docker/googlebot-webtop && docker compose down && docker compose up -d
+```
+
+## Docker Compose Up
+
+```sh
+docker compose -f compose.yaml -f compose-worker.yaml -p googlebot-webtop-client-1 up -d
 ```
