@@ -35,5 +35,5 @@ sudo chmod 777 services/client/volumes -R
 ## Docker Compose Up
 
 ```sh
-docker compose -f compose.yaml -f compose-worker.yaml -p googlebot-webtop-client-1 up -d
+docker compose -f compose-2x.yaml up -d
 ```
