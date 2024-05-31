@@ -26,8 +26,6 @@ def generate_client_service(index):
 
 def main(num_clients):
     initial_compose_data = f"""
-version: '3.8'
-
 services:
   redis:
     image: redis/redis-stack-server:latest
@@ -96,7 +94,7 @@ services:
     updated_compose_data = initial_compose_data + new_services
 
     # Write the updated compose data to a new file
-    with open(f'compose-{num_clients}.yml', 'w') as file:
+    with open(f'compose-{num_clients}.yaml', 'w') as file:
         file.write(updated_compose_data)
 
 
